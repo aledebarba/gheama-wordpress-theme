@@ -6,36 +6,6 @@
     $custom_id = get_sub_field('custom_id');
     $field = get_sub_field_object('custom_id');
 ?>
-    <?php /*
-        $color = get_sub_field('color');
-        $background = get_sub_field('background');
-        
-        if(get_sub_field('custom_color') == 1) :
-    ?>
-    <style>
-        <?php echo '.widget-'.$field['ID'].''; echo get_row_index(); ?> .hold {
-            color: <?php echo $color; ?> !important;
-            background: <?php echo $background; ?> !important;
-        }
-
-        <?php echo '.widget-'.$field['ID'].''; echo get_row_index(); ?> a {
-            color: <?php echo $color; ?> !important;
-        }
-
-        <?php echo '.widget-'.$field['ID'].''; echo get_row_index(); ?> .button {
-            color: <?php echo $background; ?> !important;
-            background: <?php echo $color; ?> !important;
-        }
-
-        <?php echo '.widget-'.$field['ID'].''; echo get_row_index(); ?> .button.line {
-            color: <?php echo $color; ?> !important;
-            border-color: <?php echo $color; ?> !important;
-            background-color: transparent !important;
-        }
-    </style>
-    <?php endif;
-    */ ?>
-
     <section class="<?php theme_widget_class_name(); echo ' '; echo $display; echo ' '; echo $style; if($extra_styles) : echo ' '; echo implode(' ', $extra_styles); endif; if(get_sub_field('custom_background') == 'image' || get_sub_field('custom_background') == 'video') : echo ' custom-background'; endif; echo ' widget-'.$field['ID'].''; echo get_row_index(); ?>" <?php if($custom_id) : echo ' id="'.$custom_id.'"'; endif; ?>>
         <div class="hold<?php if($extra_styles) : echo implode(' ', $extra_styles); endif;
                     if(get_row_layout() == 'article') :
