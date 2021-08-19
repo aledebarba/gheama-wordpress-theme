@@ -1,0 +1,127 @@
+@import url("https://use.typekit.net/huh5kjj.css");
+// 300, 500, 700
+
+$font-primary: obviously-wide, sans-serif;
+$font-secondary: obviously, sans-serif;
+$font-extra: nunito, sans-serif;
+
+$font-weight-thin: 100; // 100
+$font-weight-extra-light: 200; // 200
+$font-weight-light: 300; // 300
+$font-weight-regular: 400; // 400
+$font-weight-medium: 500; // 500
+$font-weight-semi-bold: 600; // 600
+$font-weight-bold: 700; // 700
+$font-weight-extra-bold: 800; // 800
+$font-weight-black: 900; // 900
+
+$font-size-regular: 1em;
+$font-size-xx-small: calc(#{$font-size-regular} * .7);
+$font-size-x-small: calc(#{$font-size-regular} * .8);
+$font-size-small: calc(#{$font-size-regular} * .9);
+$font-size-large: calc(#{$font-size-regular} * 1.25);
+$font-size-x-large: calc(#{$font-size-regular} * 1.75);
+$font-size-xx-large: calc(#{$font-size-regular} * 3.5);
+
+$font-size-mobile: 1.25em;
+$font-size-mobile-xx-small: calc(#{$font-size-mobile} * .7);
+$font-size-mobile-x-small: calc(#{$font-size-mobile} * .8);
+$font-size-mobile-small: calc(#{$font-size-mobile} * .9);
+$font-size-mobile-large: calc(#{$font-size-mobile} * 1.25);
+$font-size-mobile-x-large: calc(#{$font-size-mobile} * 1.75);
+$font-size-mobile-xx-large: calc(#{$font-size-mobile} * 3.5);
+
+$line-height-regular: 1.5;
+$line-height-small: calc(#{$line-height-regular} * .75);
+$line-height-large: calc(#{$line-height-regular} * 1.25);
+
+$space-regular: 2.46vw;
+$space-xx-small: calc(#{$space-regular} * .3);
+$space-x-small: calc(#{$space-regular} * .6);
+$space-small: calc(#{$space-regular} * .9);
+$space-large: calc(#{$space-regular} * 1.25);
+$space-x-large: calc(#{$space-regular} * 1.75);
+$space-xx-large: calc(#{$space-regular} * 3.25);
+
+$space-mobile: 2vmax;
+$space-mobile-xx-small: calc(#{$space-mobile} * .3);
+$space-mobile-x-small: calc(#{$space-mobile} * .6);
+$space-mobile-small: calc(#{$space-mobile} * .9);
+$space-mobile-large: calc(#{$space-mobile} * 1.25);
+$space-mobile-x-large: calc(#{$space-mobile} * 1.75);
+$space-mobile-xx-large: calc(#{$space-mobile} * 2.75);
+
+$margin-size-h: 7.14vw; // left, right
+$margin-size-v: 3.7vw; // top, bottom
+
+$border-radius-small: .15em;
+$border-radius-regular: .5em;
+$border-radius-large: 3em;
+
+// width
+$width-1: 14.28vw;
+$width-2: 28.56vw;
+$width-3: 42.84vw;
+$width-4: 57.12vw;
+$width-5: 71.4vw;
+$width-6: 85.68vw;
+$width-7: 99.96vw;
+
+// colours - start
+$grey: #{'hsl(280, 22%, 87%)'};
+$grey-opacity: #{'hsla(280, 22%, 87%, .1)'};
+
+$purple: #{'hsl(287, 45%, 25%)'};
+$purple-opacity: #{'hsla(287, 45%, 25%, .5)'};
+
+$pink: #{'hsl(347, 78%, 58%)'};
+$pink-opacity: #{'hsla(347, 78%, 58%, .5)'};
+//
+
+$color-base: $grey;
+$color-base-light: white;
+$color-base-dark: $grey;
+$color-base-opacity: $grey-opacity;
+
+$color-content: $purple; 
+$color-content-light: $purple;
+$color-content-dark: $purple;
+$color-content-opacity: $purple-opacity;
+
+$color-brand: $pink;
+$color-brand-light: $pink;
+$color-brand-dark: $pink;
+$color-brand-opacity: $pink-opacity;
+
+$color-extra: $pink;
+$color-extra-light: $pink;
+$color-extra-dark: $pink;
+$color-extra-opacity: $pink-opacity;
+// colours - end
+
+// button -start
+$button-size: 4.5em;
+$button-size-mobile: 8vmax;
+$button-padding: 3em;
+
+$button-font-family: $font-secondary;
+$button-font-size: $font-size-x-small;
+$button-font-size-mobile: $font-size-mobile-small;
+$button-font-weight: $font-weight-medium;
+
+$button-color: $color-base-light;
+$button-background: $color-content;
+$button-extra: $color-extra;
+
+$button-border-size: .2em;
+
+$border-radius-button: $border-radius-large;
+// button - end
+
+// notification colors - start
+$color-info: #{'rgb(0, 82, 204)'}; // blue
+$color-invalid: #{'rgb(255, 204, 0)'}; // yellow
+$color-warning: #{'rgb(255, 139, 0)'}; // orange
+$color-danger: #{'rgb(207, 61, 59)'}; // red
+$color-success: #{'rgb(0, 135, 90)'}; // green
+// notification colors - end

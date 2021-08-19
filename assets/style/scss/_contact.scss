@@ -1,0 +1,253 @@
+// contact form
+#contact-form {
+	position:relative;
+	
+	.form-area {
+	}
+	
+	.form-area,
+	.form-text {
+	}
+
+	.form-title {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-end);
+        
+		width: 33.333%;
+        height: $button-size;
+        padding-right: $space-regular;
+        font-size: $button-font-size;
+        font-weight: $font-weight-medium;
+        text-align: right;
+        
+        @include for-phone-only {
+            width: auto;
+            height: auto;
+            margin-bottom: $space-mobile-small;
+            font-size: $font-size-mobile-small;
+            text-align: left;
+        }
+	}
+
+	.form-area,
+	.form-text {
+		position: relative;
+		width: 100%;
+		margin-bottom: $space-regular;
+        
+        @include for-phone-only {
+            margin-bottom: $space-mobile;
+        }
+	}
+	
+	.form-area,
+    .form-text {
+		@include flexbox();
+		@include align-items(flex-start);
+		@include flex-wrap(wrap);
+        
+        @include for-phone-only {
+            //display: block;
+        }
+	}
+	
+	.form-area .wpcf7-form-control-wrap,
+	.form-text .wpcf7-form-control-wrap {
+		width: 66.666%;
+        
+        @include for-phone-only {
+            width: 100%;
+        }
+	}
+	
+	.form-area input,
+	.form-area select,
+	.form-text textarea,
+	.form-quiz input {
+		width:  100%;
+		margin: 0;
+        padding: $space-small;
+		//padding-top: .15em;
+        
+        font-size: $button-font-size;
+		font-weight: $font-weight-light;
+        
+        border: $button-border-size solid $color-content;
+        border-radius: $border-radius-regular;
+        
+        background: $color-base;
+        //@include shadow-box();
+	}
+
+	.form-area input,
+	.form-area select,
+	.form-quiz input {
+		height: $button-size;
+	}
+
+	.form-text {
+		.wpcf7-form-control-wrap {
+			//width: 100%;
+		}
+		
+		.form-title {
+			
+		}
+		
+		textarea {
+			resize: none;
+			//width: 100%;
+			height: calc(#{$button-size} * 2.5);
+			padding: $space-x-small;
+			border-radius: $border-radius-regular;
+		}
+	}
+
+	.form-button {
+        text-align: right;
+        
+		input {
+			cursor: pointer;
+            overflow: hidden;
+            position: relative;
+
+            @include flexinline();
+            @include align-items(center);
+            @include justify-content(center);
+
+            height: $button-size;
+            min-width: $button-size;
+            margin: 0;
+            padding: 0 2em;
+
+            border-width: .15em;
+            border-style: solid;
+            border-color: transparent;
+
+            color: $button-color !important;
+
+            font-weight: $button-font-weight !important;
+            font-size: $button-font-size;
+            font-family: $button-font-family;
+            line-height: 1;
+            @include text-transform();
+            text-decoration: none !important;
+
+            background-color: $button-background;
+            border-radius: $border-radius-large;
+		}
+	}
+
+	.notice {
+		position: relative;
+		margin-top: $space-xx-small;
+		
+		.text {
+			font-size: $font-size-xx-small;
+			line-height: $line-height-regular;
+		}
+	}
+
+	input[type=text]:focus,
+	input[type=email]:focus,
+	textarea:focus {
+		//border-color: $color-content-light;
+	}
+	
+	input[type=text],
+	input[type=email],
+	input[type=submit],
+	textarea {
+		//outline: none;
+	}
+	
+	br {
+		display: none;
+	}
+}
+
+// contact form 7
+.wpcf7 {
+    .screen-reader-response {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        width: 1px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    form .wpcf7-response-output {
+		margin-top: $space-large;
+		padding: $space-small;
+		color: $color-base;
+        border: 0 !important;
+		font-weight: $font-weight-regular;
+		line-height: $line-height-regular;
+		text-align: center;
+		//background: $color-content;
+		border-radius: $border-radius-large;
+    }
+
+    form.init .wpcf7-response-output {
+        display: none;
+    }
+
+    form.sent .wpcf7-response-output {
+        background: $color-success;
+    }
+
+	form.invalid .wpcf7-response-output,
+	form.unaccepted .wpcf7-response-output,
+    form.failed .wpcf7-response-output,
+    form.aborted .wpcf7-response-output {
+        background: $color-danger;
+    }
+
+    form.spam .wpcf7-response-output {
+        background: $color-warning;
+    }
+
+    form.invalid .wpcf7-response-output,
+    form.unaccepted .wpcf7-response-output {
+        //background: $color-invalid;
+		background: $color-danger;
+    }
+
+    .wpcf7-not-valid-tip {
+        display: block;
+        margin-top: $space-xx-small;
+        padding: 0;
+        //font-size: $font-size-small;
+        font-weight: $font-weight-semi-bold;
+        color: $color-danger;
+    }
+
+    .wpcf7-list-item {
+        display: inline-block;
+        margin: 0 0 0 1em;
+    }
+
+    .wpcf7-display-none {
+        display: none;
+        }
+
+    .ajax-loader {
+        display: none !important;
+    }
+
+    .ajax-loader.is-active {
+        //visibility: visible;
+    }
+
+    .ajax-error {
+        display: none;
+    }
+
+    .placeheld {
+        color: #888;
+    }
+}
