@@ -1,6 +1,6 @@
 <?php
-    if(have_rows('slideshow')) :
-    while(have_rows('slideshow')) :
+    if(have_rows('intro')) :
+    while(have_rows('intro')) :
     the_row();
 
     $headline_01 = get_sub_field('headline_01');

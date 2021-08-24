@@ -72,8 +72,8 @@
                     ?>
                     <li>
                         <a href="<?php echo esc_url($url); ?>" class="button round <?php echo $button_size; echo ' '; echo $button_class; ?>" target="<?php echo esc_attr($target); ?>">
-                                <span><?php echo esc_html($title); ?></span>
-                                <?php if($button_icon) : echo '<span>'; echo $button_icon; echo '</span>'; endif; ?>   
+                            <span><?php echo esc_html($title); ?></span>
+                            <?php if($button_icon) : echo '<span>'; echo $button_icon; echo '</span>'; endif; ?>   
                         </a>
                     </li>
                     <?php endwhile; ?>
