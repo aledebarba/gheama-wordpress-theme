@@ -209,34 +209,34 @@
         }
     }
     
-    // extra
-    &.extra {
+    // clean
+    &.clean {
         &, p, a, [class^="h"], ul, ol {
-            color: $color-base;
+            color: $color-content;
         }
         
         .hold {
-            background: $color-base-dark;
+            background: $color-base;
         }
         
         // components
         .button {
-            color: $color-base-dark;
+            color: $color-content;
             background-color: $color-base;
 
             &.line {
-                color: $color-base;
+                color: $color-content;
                 border-color: $color-base !important;
                 background-color: transparent;
             }
         }
         
         .card-list {
-            border-color: $color-base;
+            border-color: $color-content;
             
             &.clean {
                 &+&.clean {
-                    border-color: $color-base;
+                    border-color: $color-content;
                 }
             }
         }
@@ -246,14 +246,14 @@
             .form-area select,
             .form-text textarea,
             .form-quiz input {
-                color: $color-base;
+                color: $color-content;
                 border-color: $color-base; 
                 background: transparent;
             }
             
             .form-button {
                 input {
-                    color: $color-base-dark !important;
+                    color: $color-base-content !important;
                     background: transparent;
                 }
             }
