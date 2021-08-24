@@ -145,7 +145,7 @@
             .form-text textarea,
             .form-quiz input {
                 color: $color-base;
-                border-color: $color-base; 
+                border-color: $color-base-light; 
                 background: transparent;
             }
             
@@ -171,21 +171,21 @@
         // components
         .button {
             color: $color-brand;
-            background-color: $color-base;
+            background-color: $color-base-light;
 
             &.line {
                 color: $color-base;
-                border-color: $color-base !important;
+                border-color: $color-base-light !important;
                 background-color: transparent;
             }
         }
         
         .card-list {
-            border-color: $color-base;
+            border-color: $color-base-light;
             
             &.clean {
                 &+&.clean {
-                    border-color: $color-base;
+                    border-color: $color-base-light;
                 }
             }
         }
@@ -195,8 +195,8 @@
             .form-area select,
             .form-text textarea,
             .form-quiz input {
-                color: $color-base;
-                border-color: $color-base; 
+                color: $color-base-light;
+                border-color: $color-base-light; 
                 background: transparent;
             }
             

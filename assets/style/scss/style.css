@@ -278,7 +278,7 @@ body {
 
 body,
 a {
-  color: hsl(280, 22%, 87%); }
+  color: hsl(287, 45%, 25%); }
 
 html {
   -moz-osx-font-smoothing: grayscale;
@@ -867,7 +867,7 @@ img {
   [class^="widget-"].dark #contact-form .form-text textarea,
   [class^="widget-"].dark #contact-form .form-quiz input {
     color: hsl(280, 22%, 87%);
-    border-color: hsl(280, 22%, 87%);
+    border-color: white;
     background: transparent; }
   [class^="widget-"].dark #contact-form .form-button input {
     color: hsl(287, 45%, 25%) !important;
@@ -878,21 +878,21 @@ img {
     background: hsl(347, 78%, 58%); }
   [class^="widget-"].selected .button {
     color: hsl(347, 78%, 58%);
-    background-color: hsl(280, 22%, 87%); }
+    background-color: white; }
     [class^="widget-"].selected .button.line {
       color: hsl(280, 22%, 87%);
-      border-color: hsl(280, 22%, 87%) !important;
+      border-color: white !important;
       background-color: transparent; }
   [class^="widget-"].selected .card-list {
-    border-color: hsl(280, 22%, 87%); }
+    border-color: white; }
     [class^="widget-"].selected .card-list.clean + [class^="widget-"].selected .card-list.clean.clean {
-      border-color: hsl(280, 22%, 87%); }
+      border-color: white; }
   [class^="widget-"].selected #contact-form .form-area input,
   [class^="widget-"].selected #contact-form .form-area select,
   [class^="widget-"].selected #contact-form .form-text textarea,
   [class^="widget-"].selected #contact-form .form-quiz input {
-    color: hsl(280, 22%, 87%);
-    border-color: hsl(280, 22%, 87%);
+    color: white;
+    border-color: white;
     background: transparent; }
   [class^="widget-"].selected #contact-form .form-button input {
     color: hsl(347, 78%, 58%) !important;
