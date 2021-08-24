@@ -106,7 +106,7 @@
     // dark
     &.dark {
         &, p, a, [class^="h"], ul, ol {
-            color: $color-base;
+            color: $color-base-light;
         }
         
         .hold {
@@ -116,11 +116,11 @@
         // components
         .button {
             color: $color-content;
-            background-color: $color-base;
+            background-color: $color-base-light;
 
             &.line {
                 color: $color-base;
-                border-color: $color-base;
+                border-color: $color-base-light;
                 background-color: transparent;
             }
             
@@ -130,11 +130,11 @@
         }
         
         .card-list {
-            border-color: $color-base;
+            border-color: $color-base-light;
             
             &.clean {
                 &+&.clean {
-                    border-color: $color-base;
+                    border-color: $color-base-light;
                 }
             }
         }
