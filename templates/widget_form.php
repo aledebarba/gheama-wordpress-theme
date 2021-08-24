@@ -4,6 +4,7 @@
 ?>
 <div class="box-form">
     <?php
+	$content = get_field('contact_form');
         if($content) : 
         foreach($content as $p) : // variable must NOT be called $post (IMPORTANT) 
             $cf7_id= $p->ID;
