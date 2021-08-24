@@ -873,7 +873,7 @@ img {
     color: hsl(287, 45%, 25%) !important;
     background: transparent; }
   [class^="widget-"].selected, [class^="widget-"].selected p, [class^="widget-"].selected a, [class^="widget-"].selected [class^="h"], [class^="widget-"].selected ul, [class^="widget-"].selected ol {
-    color: hsl(280, 22%, 87%); }
+    color: white; }
   [class^="widget-"].selected .hold {
     background: hsl(347, 78%, 58%); }
   [class^="widget-"].selected .button {

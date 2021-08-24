@@ -161,7 +161,7 @@
     // selected
     &.selected {
         &, p, a, [class^="h"], ul, ol {
-            color: $color-base;
+            color: $color-base-light;
         }
         
         .hold {
