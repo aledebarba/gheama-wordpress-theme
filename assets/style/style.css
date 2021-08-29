@@ -496,7 +496,7 @@ img {
       .header .menu-main ul > li > a {
         display: block;
         color: hsl(287, 45%, 25%);
-        font-size: calc(1em * 1.25);
+        font-size: 1em;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: .1em; }
