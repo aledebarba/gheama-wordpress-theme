@@ -1073,9 +1073,10 @@ img {
   bottom: 0;
   left: 0;
   content: '';
-  z-index: 9;
-  height: 100% !important;
-  width: auto; }
+  z-index: 9; }
+  .widget-article .custom-background img {
+    height: 100% !important;
+    width: auto; }
 .widget-article .box-image,
 .widget-article .box-embed {
   width: 42.84vw; }
