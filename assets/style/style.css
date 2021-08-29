@@ -878,6 +878,8 @@ img {
   [class^="widget-"].dark #contact-form .form-button input {
     color: hsl(287, 45%, 25%) !important;
     background: transparent; }
+  [class^="widget-"].dark video {
+    opacity: 0.6; }
   [class^="widget-"].selected, [class^="widget-"].selected p, [class^="widget-"].selected a, [class^="widget-"].selected [class^="h"], [class^="widget-"].selected ul, [class^="widget-"].selected ol {
     color: white; }
   [class^="widget-"].selected .hold {
