@@ -234,6 +234,7 @@
         // components
         .button {
             color: $color-content;
+            background-color: transparent!important;
 			padding: 0;
 
             &.line {
