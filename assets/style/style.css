@@ -1953,12 +1953,12 @@ img {
     content: '';
     z-index: -1;
     opacity: 0.6; }
-  .widget-shortcode .custom-background img {
-    height: 100% !important;
-    width: auto !important; }
-  .widget-shortcode .custom-background video {
-    height: 100% !important;
-    width: auto !important; }
+    .widget-shortcode .custom-background .cover img {
+      height: 100% !important;
+      width: auto !important; }
+    .widget-shortcode .custom-background .cover video {
+      height: 100% !important;
+      width: auto !important; }
 
 .button {
   cursor: pointer;
