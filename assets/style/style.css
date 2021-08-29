@@ -1941,6 +1941,23 @@ img {
 .widget-slide.full-height.stack .item {
   height: calc(100vh - (3.7vw * 2)); }
 
+.widget-shortcode .center .holdcenter .box-headline {
+  margin: auto !important; }
+.widget-shortcode .custom-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  z-index: 9; }
+  .widget-shortcode .custom-background img {
+    height: 100% !important;
+    width: auto; }
+  .widget-shortcode .custom-background video {
+    height: 100% !important;
+    width: auto; }
+
 .button {
   cursor: pointer;
   overflow: hidden;

@@ -1932,3 +1932,36 @@
         }
     }    
 }
+
+// shortcode
+.widget-shortcode {
+	
+	.center {
+		.holdcenter{
+			.box-headline {
+				margin: auto!important;
+			}
+		}
+	}
+	
+	.custom-background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		z-index: 9;
+		
+		img {
+			height: 100%!important;
+			width: auto;
+		}
+		
+		video {
+			height: 100%!important;
+			width: auto;
+		}
+	}
+	
+}
