@@ -19,9 +19,9 @@ if(get_sub_field('headline_01') || get_sub_field('headline_02') || get_sub_field
         endif;
     
         if(get_sub_field('headline_03')) :
-            echo '<p>';
+            echo '<h6 class="h6">';
             echo $headline_03;
-            echo '</p>';
+            echo '</h6>';
         endif;
     ?>
 </div>
