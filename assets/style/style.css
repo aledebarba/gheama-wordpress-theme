@@ -227,7 +227,7 @@ p {
       line-height: calc(1.5 * .75); } }
 
 .h3 {
-  font-size: calc(1em * 1.75);
+  font-size: calc(calc(1em * 1.25) * 1.1);
   line-height: 1.5;
   margin-bottom: calc(2.46vw * .6) !important; }
   @media only screen and (max-device-width: 599px) {
