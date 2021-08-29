@@ -464,7 +464,6 @@
         @include flexbox();
         @include align-items(center);
         @include flex-wrap(nowrap);
-		z-index: 90;
         
         @include for-phone-only {
             @include flex-direction(column);
@@ -477,6 +476,7 @@
 		
     .box-text {
         width: calc(100% - #{$width-3});
+		z-index: 90;
         
         @include for-phone-only {
             width: auto !important;
@@ -485,7 +485,7 @@
     }
 	
 	.custom-background {
-		display: absolute;
+		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
