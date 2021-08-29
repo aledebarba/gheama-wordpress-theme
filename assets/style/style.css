@@ -210,8 +210,9 @@ p {
 
 .h1 {
   font-size: calc(1em * 3);
-  line-height: calc(1.5 * .75);
-  margin-top: calc(2.46vw * .6); }
+  line-height: calc(1.5 * .75); }
+  .h1 + .h1 {
+    margin-top: calc(2.46vw * .6); }
   @media only screen and (max-device-width: 599px) {
     .h1 {
       font-size: calc(1.25em * 1.25);
@@ -219,7 +220,8 @@ p {
 
 .h2 {
   font-size: calc(1em * 1.75);
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin-top: calc(2.46vw * .6); }
   @media only screen and (max-device-width: 599px) {
     .h2 {
       font-size: calc(1.25em * 1.25);
@@ -227,7 +229,8 @@ p {
 
 .h3 {
   font-size: calc(1em * 1.25);
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin-top: calc(2.46vw * .6); }
   @media only screen and (max-device-width: 599px) {
     .h3 {
       font-size: 1.25em;
@@ -235,7 +238,8 @@ p {
 
 .h4 {
   font-size: calc(1em * 1.75);
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin-top: calc(2.46vw * .6); }
   @media only screen and (max-device-width: 599px) {
     .h4 {
       font-size: 1.25em;
@@ -244,6 +248,7 @@ p {
 .h5 {
   font-size: calc(1em * 1.25);
   line-height: 1.5;
+  margin-top: calc(2.46vw * .6);
   font-weight: 700 !important; }
   @media only screen and (max-device-width: 599px) {
     .h5 {
@@ -252,7 +257,8 @@ p {
 
 .h6 {
   font-size: calc(1em * 1.25);
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin-top: calc(2.46vw * .6); }
   @media only screen and (max-device-width: 599px) {
     .h6 {
       font-size: calc(1.25em * .9);

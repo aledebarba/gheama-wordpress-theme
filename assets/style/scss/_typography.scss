@@ -94,7 +94,10 @@ p {
 .h1 {
 	font-size: $font-size-xx-large;
 	line-height: $line-height-small;
-	margin-top: $space-x-small;
+	
+	&+.h1 {
+		margin-top: $space-x-small;
+	}
     
     @include for-phone-only {
 		font-size: $font-size-mobile-large;
@@ -105,6 +108,7 @@ p {
 .h2 {
 	font-size: $font-size-x-large;
 	line-height: $line-height-regular;
+	margin-top: $space-x-small;
 	
 	@include for-phone-only {
 		font-size: calc(#{$font-size-mobile} * 1.25);
@@ -115,6 +119,7 @@ p {
 .h3 {
 	font-size: $font-size-large;
 	line-height: $line-height-regular;
+	margin-top: $space-x-small;
 	
 	@include for-phone-only {
 		font-size: $font-size-mobile;
@@ -125,6 +130,7 @@ p {
 .h4 {
 	font-size: $font-size-x-large;
 	line-height: $line-height-regular;
+	margin-top: $space-x-small;
     
 	@include for-phone-only {
 		font-size: $font-size-mobile;
@@ -135,6 +141,7 @@ p {
 .h5 {
     font-size: $font-size-large;
 	line-height: $line-height-regular;
+	margin-top: $space-x-small;
     
     font-weight: $font-weight-bold !important;
     
@@ -147,6 +154,7 @@ p {
 .h6 {
     font-size: $font-size-large;
 	line-height: $line-height-regular;
+	margin-top: $space-x-small;
     
     @include for-phone-only {
 		font-size: $font-size-mobile-small;
