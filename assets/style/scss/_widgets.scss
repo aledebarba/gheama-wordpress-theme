@@ -1937,8 +1937,8 @@
 .widget-shortcode {
 	
 	.center {
-		.holdcenter{	
-			.box-headline {
+		&.holdcenter{	
+			&.box-headline {
 				margin: auto!important;
 			}
 		}
