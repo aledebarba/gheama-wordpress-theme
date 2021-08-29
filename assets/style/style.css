@@ -431,7 +431,7 @@ img {
             height: calc(4.5em * 1.05);
             padding: 0 calc(2.46vw * .6);
             color: hsl(280, 22%, 87%) !important;
-            font-size: calc(1em * .8);
+            font-size: calc(1em * .7);
             font-weight: 900;
             line-height: 1.2;
             letter-spacing: .05em;
