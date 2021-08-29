@@ -1051,7 +1051,8 @@ img {
   align-items: center;
   -webkit-flex-wrap: nowrap;
   -moz-flex-wrap: nowrap;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  z-index: 90; }
   @media only screen and (max-device-width: 599px) {
     .widget-article .hold {
       -webkit-flex-direction: column;
@@ -1065,6 +1066,16 @@ img {
     .widget-article .box-text {
       width: auto !important;
       padding: calc(2vmax * 1.25) calc(2.46vw * 3.25); } }
+.widget-article .custom-background {
+  display: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  z-index: 9;
+  height: 100% !important;
+  width: auto; }
 .widget-article .box-image,
 .widget-article .box-embed {
   width: 42.84vw; }
