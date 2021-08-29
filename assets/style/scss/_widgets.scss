@@ -914,11 +914,11 @@
             &.col-66-33 {
                 .card {
                     &:nth-child(odd) {
-                        width: 33.333%;
+                        width: 66.666%;
                     }
                     
                     &:nth-child(even) {
-                        width: 66.666%;
+                        width: 33.333%;
                     }
                 }
             }

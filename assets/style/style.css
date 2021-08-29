@@ -1329,9 +1329,9 @@ img {
     .widget-list .hold-list.mosaic.col-33-66 .card:nth-child(even) {
       width: 66.666%; }
     .widget-list .hold-list.mosaic.col-66-33 .card:nth-child(odd) {
-      width: 33.333%; }
-    .widget-list .hold-list.mosaic.col-66-33 .card:nth-child(even) {
       width: 66.666%; }
+    .widget-list .hold-list.mosaic.col-66-33 .card:nth-child(even) {
+      width: 33.333%; }
 
 .widget-feed .headline-box {
   margin-bottom: 2.46vw; }
