@@ -41,6 +41,12 @@
                 echo $headline_02;
                 echo '</h4>';
             endif;
+
+            if(get_sub_field('headline_03')) :
+                echo '<p>';
+                echo $headline_03;
+                echo '</p>';
+            endif;
         ?>
 
         <?php get_template_part('templates/element_buttons'); ?>
