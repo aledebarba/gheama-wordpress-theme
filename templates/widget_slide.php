@@ -5,6 +5,7 @@
 
     $headline_01 = get_sub_field('headline_01');
     $headline_02 = get_sub_field('headline_02');
+    $headline_03 = get_sub_field('headline_03');
 
     $content_type = get_sub_field('content_type');
     $content_position = get_sub_field('content_position');
