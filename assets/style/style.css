@@ -1941,8 +1941,10 @@ img {
 .widget-slide.full-height.stack .item {
   height: calc(100vh - (3.7vw * 2)); }
 
-.widget-shortcode .center .holdcenter .box-headline {
-  margin: auto !important; }
+.widget-shortcode .center .holdcenter {
+  z-index: 90; }
+  .widget-shortcode .center .holdcenter .box-headline {
+    margin: auto !important; }
 .widget-shortcode .custom-background {
   position: absolute;
   top: 0;
