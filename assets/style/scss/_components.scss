@@ -115,7 +115,7 @@
         min-height: calc(#{$button-size} * .5);
         //min-height: 1px;
         height: auto;
-        padding: 0;
+        padding: 0!important;
         border-width: 0 !important;
         color: $button-background !important;
         background: transparent !important;
