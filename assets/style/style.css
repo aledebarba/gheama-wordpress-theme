@@ -156,7 +156,7 @@ strong {
   font-weight: 800; }
 
 p {
-  font-size: calc(1em * .9);
+  font-size: calc(1em * 1.25);
   font-family: nunito, sans-serif;
   font-weight: 300;
   letter-spacing: .025em;
@@ -210,9 +210,8 @@ p {
 
 .h1 {
   font-size: calc(1em * 3);
-  line-height: calc(1.5 * .75); }
-  .h1 + .h1 {
-    margin-top: calc(2.46vw * .6); }
+  line-height: calc(1.5 * .75);
+  margin-bottom: calc(2.46vw * .6) !important; }
   @media only screen and (max-device-width: 599px) {
     .h1 {
       font-size: calc(1.25em * 1.25);
@@ -221,7 +220,7 @@ p {
 .h2 {
   font-size: calc(1em * 1.75);
   line-height: 1.5;
-  margin-top: calc(2.46vw * .6); }
+  margin-bottom: calc(2.46vw * .6) !important; }
   @media only screen and (max-device-width: 599px) {
     .h2 {
       font-size: calc(1.25em * 1.25);
@@ -230,7 +229,7 @@ p {
 .h3 {
   font-size: calc(1em * 1.25);
   line-height: 1.5;
-  margin-top: calc(2.46vw * .6); }
+  margin-bottom: calc(2.46vw * .6) !important; }
   @media only screen and (max-device-width: 599px) {
     .h3 {
       font-size: 1.25em;
@@ -239,16 +238,16 @@ p {
 .h4 {
   font-size: calc(1em * 1.75);
   line-height: 1.5;
-  margin-top: calc(2.46vw * .6); }
+  margin-bottom: calc(2.46vw * .6) !important; }
   @media only screen and (max-device-width: 599px) {
     .h4 {
       font-size: 1.25em;
-      line-height: 1.5; } }
+      line-height: 1.5 !important; } }
 
 .h5 {
   font-size: calc(1em * 1.25);
   line-height: 1.5;
-  margin-top: calc(2.46vw * .6);
+  margin-bottom: calc(2.46vw * .6) !important;
   font-weight: 700 !important; }
   @media only screen and (max-device-width: 599px) {
     .h5 {
@@ -258,7 +257,7 @@ p {
 .h6 {
   font-size: calc(1em * 1.25);
   line-height: 1.5;
-  margin-top: calc(2.46vw * .6); }
+  margin-bottom: calc(2.46vw * .6) !important; }
   @media only screen and (max-device-width: 599px) {
     .h6 {
       font-size: calc(1.25em * .9);
