@@ -94,6 +94,7 @@ p {
 .h1 {
 	font-size: $font-size-xx-large;
 	line-height: $line-height-small;
+	margin-top: $space-x-small;
     
     @include for-phone-only {
 		font-size: $font-size-mobile-large;

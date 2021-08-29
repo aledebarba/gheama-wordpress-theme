@@ -210,7 +210,8 @@ p {
 
 .h1 {
   font-size: calc(1em * 3);
-  line-height: calc(1.5 * .75); }
+  line-height: calc(1.5 * .75);
+  margin-top: calc(2.46vw * .6); }
   @media only screen and (max-device-width: 599px) {
     .h1 {
       font-size: calc(1.25em * 1.25);
