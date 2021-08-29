@@ -29,7 +29,7 @@ strong {
 }
 
 p {
-    font-size: $font-size-large;
+	font-size: calc(#{$font-size-large} * 0.8);
     font-family: $font-extra;
     font-weight: $font-weight-light;
     letter-spacing: .025em;
