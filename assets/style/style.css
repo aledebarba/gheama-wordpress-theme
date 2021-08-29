@@ -915,7 +915,6 @@ img {
     background: hsl(280, 22%, 87%); }
   [class^="widget-"].clean .button {
     color: hsl(287, 45%, 25%);
-    background-color: hsl(280, 22%, 87%);
     padding: 0; }
     [class^="widget-"].clean .button.line {
       color: hsl(287, 45%, 25%);
