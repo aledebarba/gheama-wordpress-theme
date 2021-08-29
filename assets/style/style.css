@@ -209,7 +209,7 @@ p {
   font-weight: 500 !important; }
 
 .h1 {
-  font-size: calc(1em * 3.5);
+  font-size: calc(1em * 3);
   line-height: calc(1.5 * .75); }
   @media only screen and (max-device-width: 599px) {
     .h1 {
