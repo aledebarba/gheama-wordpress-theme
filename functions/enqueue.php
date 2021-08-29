@@ -6,8 +6,8 @@
 add_action('wp_enqueue_scripts', 'theme_remove_default_jquery');
 function theme_remove_default_jquery() {
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', '', false, null);
-	wp_enqueue_script('jquery');
+    wp_register_script( 'jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js", array(), '3.6.0', false );
+    wp_enqueue_script('jquery');
 }
 
 // Remove Scripts
