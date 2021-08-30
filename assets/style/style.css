@@ -1727,28 +1727,14 @@ img {
             margin: 0 0 0 calc(2vmax * 1.25) !important;
             padding: 0 !important;
             border: 0 !important; } }
-.widget-form.center .holdcenter {
+.widget-form.center .holdcenter .box-form {
+  -webkit-order: 2;
+  -moz-order: 2;
+  order: 2; }
+.widget-form.center .holdcenter .box-side {
   -webkit-order: 1;
   -moz-order: 1;
   order: 1; }
-  @media only screen and (max-device-width: 599px) {
-    .widget-form.center .holdcenter {
-      width: 100%;
-      margin-bottom: calc(2vmax * 1.25);
-      overflow: auto;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-wrap: nowrap;
-      -moz-flex-wrap: nowrap;
-      flex-wrap: nowrap; }
-      .widget-form.center .holdcenter .card-list {
-        white-space: nowrap; }
-        .widget-form.center .holdcenter .card-list + .card-list {
-          margin: 0 0 0 calc(2vmax * 1.25) !important;
-          padding: 0 !important;
-          border: 0 !important; } }
   .widget-form.center .holdcenter .box-side .box-headline {
     margin: auto; }
 

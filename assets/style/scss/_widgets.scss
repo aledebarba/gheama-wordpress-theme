@@ -1603,27 +1603,13 @@
 		
 		&.center {
 			.holdcenter{
-				@include order(1);
-
-				@include for-phone-only {
-					width: 100%;
-					margin-bottom: $space-mobile-large;
-
-					overflow: auto;
-					@include flexbox();
-					@include flex-wrap(nowrap);
-
-					.card-list {
-						white-space: nowrap;
-
-						&+.card-list {
-							margin: 0 0 0 $space-mobile-large !important;
-							padding: 0 !important;
-							border: 0 !important;
-						}
-					}
+				.box-form {
+					@include order(2);
 				}
+				
+				
 				.box-side{
+					@include order(1);
 					.box-headline{
 						margin: auto;
 					}
