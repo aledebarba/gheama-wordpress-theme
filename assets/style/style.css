@@ -1767,11 +1767,13 @@ img {
   .widget-form.center .holdcenter .box-form {
     -webkit-order: 2;
     -moz-order: 2;
-    order: 2; }
+    order: 2;
+    z-index: 90; }
   .widget-form.center .holdcenter .box-side {
     -webkit-order: 1;
     -moz-order: 1;
-    order: 1; }
+    order: 1;
+    z-index: 90; }
     .widget-form.center .holdcenter .box-side .box-headline {
       margin: auto;
       margin-bottom: calc(2.46vw * 1.75); }
@@ -1782,7 +1784,7 @@ img {
     bottom: 0;
     left: 0;
     content: '';
-    z-index: -1;
+    z-index: 9;
     opacity: 0.6; }
     .widget-form.center .holdcenter .custom-background img {
       width: 100% !important;
