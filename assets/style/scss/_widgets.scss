@@ -1945,6 +1945,8 @@
 .widget-shortcode {
 	
 	&.center {
+		padding: 0 $space-x-large $space-x-large;
+		
 		.holdcenter{	
 			.box-headline {
 				margin: auto!important;
