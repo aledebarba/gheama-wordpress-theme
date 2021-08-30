@@ -906,7 +906,8 @@ img {
     border-color: white;
     background: transparent; }
   [class^="widget-"].selected #contact-form .form-button input {
-    color: hsl(347, 78%, 58%) !important;
+    color: white !important;
+    border-color: white;
     background: transparent; }
   [class^="widget-"].selected video {
     opacity: 0.6; }
@@ -964,7 +965,7 @@ img {
       -webkit-flex-direction: column;
       -moz-flex-direction: column;
       flex-direction: column;
-      margin-bottom: calc(2.46vw * .9); }
+      margin-bottom: calc(2.46vw * .6); }
     [class^="widget-"].center #contact-form .form-button {
       text-align: center;
       margin-bottom: 2.46vw;
