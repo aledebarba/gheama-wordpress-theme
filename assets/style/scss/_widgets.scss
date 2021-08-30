@@ -1598,6 +1598,15 @@
             }
 		}
 		
+		// positions
+		
+		&.center {
+			.box-side{
+				.box-headline{
+					margin: auto;
+				}
+			}
+		}
 
 	}
 }

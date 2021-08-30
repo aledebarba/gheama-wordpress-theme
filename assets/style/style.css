@@ -1727,6 +1727,8 @@ img {
             margin: 0 0 0 calc(2vmax * 1.25) !important;
             padding: 0 !important;
             border: 0 !important; } }
+  .widget-form .hold.center .box-side .box-headline {
+    margin: auto; }
 
 .widget-layout .hold {
   display: -webkit-box;
