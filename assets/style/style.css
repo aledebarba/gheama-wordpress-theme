@@ -1070,8 +1070,9 @@ img {
     align-items: center; }
     @media only screen and (max-device-width: 599px) {
       [class^="widget-"] .button-hold {
+        margin: auto;
         margin-top: 2vmax;
-        margin: auto; } }
+        margin-bottom: 2vmax; } }
     [class^="widget-"] .button-hold .button + .button {
       margin-left: calc(2.46vw * .3); }
     [class^="widget-"] .button-hold.button-loading .button {

@@ -482,8 +482,9 @@
         @include align-items(center);
         
         @include for-phone-only {
-            margin-top: $space-mobile;
 			margin: auto;
+			margin-top: $space-mobile;
+			margin-bottom: $space-mobile;
         }
         
         .button {
