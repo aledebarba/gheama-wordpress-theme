@@ -12,14 +12,17 @@
 
             $image = get_sub_field('image');
             $icon = get_sub_field('icon');
+            if (!$icon) {
+                $icon = "";
+            }           
 
             $link = get_sub_field('link');
 
             if($image) :
-                $size = 'medium';
-                $thumb = $image['sizes'][$size];
+                $image_size = 'medium';
+                $image_thumb = $image['sizes'][$image_size];
             endif;
-
+           
             if($link) :
                 $url = $link['url'];
                 $title = $link['title'];
@@ -30,12 +33,15 @@
             $headline_02 = get_sub_field('headline_02');
             $headline_03 = get_sub_field('headline_03');
             $text_content = get_sub_field('content');
+            $show_icon  = (get_sub_field('optional_element') == 'show_icon');
+            $show_image = (get_sub_field('optional_element') == 'show_image');
+
         ?>
             <?php if($list_format == 'accordion') : ?>
                <!-- item -->
                 <div class="item-accordion">
                     <div class="title-accordion">
-                        <?php echo $headline_01 ?>
+                        <?php echo $headline_01; ?>
                     </div>
                     <div class="panel-accordion">
                         <div class="box-accordion">
@@ -52,6 +58,10 @@
                                         echo $headline_03;
                                         echo '</p>';
                                     endif;
+                                    
+                                    // render image or icon and text content
+                                    if ($show_image and $image) echo "<img src='$image_thumb' alt='item list illustration'/>";
+                                    if ($show_icon and $icon) echo "<span>$icon</span>";
                                     echo $text_content;
                                 ?>
                             </div>
@@ -115,7 +125,12 @@
                                     echo $headline_03;
                                     echo '</p>';
                                 endif;
+                                
+                                // render image or icon and text content
+                                if ($show_image and $image) echo "<img src='$image_thumb' alt='item list illustration'/>";
+                                if ($show_icon and $icon) echo $icon;
                                 echo $text_content;
+
                             ?>
                         </div>
                         

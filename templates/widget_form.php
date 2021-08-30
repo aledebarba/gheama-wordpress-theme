@@ -1,23 +1,21 @@
 <?php
     $privacy = get_sub_field('privacy');
 	$content = get_sub_field('content');
+    $form_id = "[contact-form-7 id='$content->ID']";
 ?>
+
 <div class="box-form">
     <?php
-	$content = get_field('contact_form');
-        if($content) : 
-        foreach($content as $p) : // variable must NOT be called $post (IMPORTANT) 
-            $cf7_id= $p->ID;
-            echo do_shortcode('[contact-form-7 id="'.$cf7_id.'" ]');
-        endforeach;
-        endif;
+          echo do_shortcode($form_id);
+          if ($privacy) {
+              echo "
+                <div class='privacy'>
+                    $privacy
+                </div>
+              ";
+          }
     ?>
 
-    <?php if(get_sub_field('privacy')) : ?>
-        <div class="privacy">
-            <?php echo $privacy; ?>
-        </div>
-    <?php endif; ?>
 </div>
 
 <aside class="box-side">
