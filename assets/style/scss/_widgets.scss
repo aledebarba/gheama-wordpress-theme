@@ -148,14 +148,14 @@
             .form-area select,
             .form-text textarea,
             .form-quiz input {
-                color: $color-base;
+                color: $color-base-light;
                 border-color: $color-base-light; 
                 background: transparent;
             }
             
             .form-button {
                 input {
-                    color: $color-content !important;
+                    color: $color-base-light !important;
                     background: transparent;
                 }
             }
