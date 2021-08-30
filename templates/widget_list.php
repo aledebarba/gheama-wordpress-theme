@@ -108,11 +108,6 @@
                         ?>
                         <div class="box-text">
                             <?php
-							
-							// render image or icon and text content
-                                if ($show_image and $image) echo "<img src='$image_thumb' alt='item list illustration'/>";
-                                if ($show_icon and $icon) echo $icon;
-							
                                 if($headline_01) :
                                     echo '<h5 class="h4">';
                                     echo $headline_01;
@@ -131,7 +126,9 @@
                                     echo '</p>';
                                 endif;
                                 
-                                
+                                // render image or icon and text content
+                                if ($show_image and $image) echo "<img src='$image_thumb' alt='item list illustration'/>";
+                                if ($show_icon and $icon) echo $icon;
                                 echo $text_content;
 
                             ?>
