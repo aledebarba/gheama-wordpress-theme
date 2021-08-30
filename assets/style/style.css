@@ -1744,7 +1744,8 @@ img {
     -moz-order: 1;
     order: 1; }
     .widget-form.center .holdcenter .box-side .box-headline {
-      margin: auto; }
+      margin: auto;
+      margin-bottom: calc(2.46vw * 1.75); }
 
 .widget-layout .hold {
   display: -webkit-box;

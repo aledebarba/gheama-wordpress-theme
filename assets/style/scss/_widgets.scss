@@ -1615,6 +1615,7 @@
 					@include order(1);
 					.box-headline{
 						margin: auto;
+						margin-bottom: $space-x-large;
 					}
 				}
 			}
