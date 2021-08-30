@@ -1943,11 +1943,9 @@ img {
 .widget-slide.full-height.stack .item {
   height: calc(100vh - (3.7vw * 2)); }
 
-.widget-shortcode.center {
-  padding: 0 calc(2.46vw * 1.75) calc(2.46vw * 3.25); }
-  .widget-shortcode.center .holdcenter .box-headline {
-    margin: auto !important;
-    padding: calc(2.46vw * 1.75) 0 2.46vw 0; }
+.widget-shortcode.center .holdcenter .box-headline {
+  margin: auto !important;
+  padding-bottom: 2.46vw; }
 .widget-shortcode .custom-background {
   position: absolute;
   top: 0;

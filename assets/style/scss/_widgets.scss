@@ -1946,13 +1946,11 @@
 // shortcode
 .widget-shortcode {
 	
-	&.center {
-		padding: 0 $space-x-large $space-xx-large;
-		
+	&.center {		
 		.holdcenter{	
 			.box-headline {
 				margin: auto!important;
-				padding: $space-x-large 0 $space-regular 0;
+				padding-bottom: $space-regular;
 			}
 		}
 	}
