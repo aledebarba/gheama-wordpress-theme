@@ -874,11 +874,11 @@ img {
   [class^="widget-"].dark #contact-form .form-area select,
   [class^="widget-"].dark #contact-form .form-text textarea,
   [class^="widget-"].dark #contact-form .form-quiz input {
-    color: hsl(280, 22%, 87%);
+    color: white;
     border-color: white;
     background: transparent; }
   [class^="widget-"].dark #contact-form .form-button input {
-    color: hsl(287, 45%, 25%) !important;
+    color: white !important;
     background: transparent; }
   [class^="widget-"].dark video {
     opacity: 0.6; }
