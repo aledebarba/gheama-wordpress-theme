@@ -1957,10 +1957,10 @@ img {
   content: '';
   z-index: -1;
   opacity: 0.6; }
-  .widget-shortcode .custom-background .cover img {
+  .widget-shortcode .custom-background img {
     height: 100% !important;
     width: auto !important; }
-  .widget-shortcode .custom-background .cover video {
+  .widget-shortcode .custom-background video {
     height: 100% !important;
     width: auto !important; }
 
