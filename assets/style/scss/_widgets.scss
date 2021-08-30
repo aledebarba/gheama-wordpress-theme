@@ -1601,13 +1601,14 @@
 		// positions
 		
 		&.center {
-			.box-side{
-				.box-headline{
-					margin: auto;
+			.holdcenter{
+				.box-side{
+					.box-headline{
+						margin: auto;
+					}
 				}
 			}
 		}
-
 	}
 }
 
