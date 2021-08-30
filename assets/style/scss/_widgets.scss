@@ -1574,7 +1574,7 @@
             }
 		}
 		
-		.box-aside {
+		.box-side {
 			@include order(1);
 			width: 33.333%;
             
@@ -1945,7 +1945,7 @@
 .widget-shortcode {
 	
 	&.center {
-		padding: 0 $space-x-large $space-x-large;
+		padding: 0 $space-x-large $space-xx-large;
 		
 		.holdcenter{	
 			.box-headline {
