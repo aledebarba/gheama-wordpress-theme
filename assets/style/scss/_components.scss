@@ -705,8 +705,8 @@
 
             position: absolute;
             top: 50%;
-            right: $space-small;
-            width: 1em;
+            right: 0;
+            //width: 1em;
             @include transform(translateX(-50%));
         }
 
