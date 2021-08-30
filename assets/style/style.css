@@ -943,6 +943,26 @@ img {
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center; }
+    [class^="widget-"].center #contact-form .form-title {
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      width: 66.66%; }
+    [class^="widget-"].center #contact-form .form-area,
+    [class^="widget-"].center #contact-form .form-text {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column; }
   [class^="widget-"].full-height {
     height: 100vh; }
     [class^="widget-"].full-height .hold {

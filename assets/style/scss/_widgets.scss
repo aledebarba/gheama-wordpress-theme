@@ -285,6 +285,23 @@
         .button-hold {
             @include justify-content(center);
         }
+		
+		#contact-form {
+			.form-title{
+				@include justify-content(center);
+				width: 66.66%;
+			}
+			
+			.form-area,
+			.form-text {
+				@include flexbox();
+				@include align-items(center);
+				@include flex-wrap(wrap);
+				@include flex-direction(column);
+
+			}
+		}
+		
     }
     
     // full height
