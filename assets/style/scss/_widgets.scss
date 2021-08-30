@@ -299,11 +299,8 @@
 				@include align-items(center);
 				@include flex-wrap(wrap);
 				@include flex-direction(column);
-
-			}
-			
-			.form-text {
 				margin-bottom: $space-small;
+
 			}
 			
 			.form-button {
