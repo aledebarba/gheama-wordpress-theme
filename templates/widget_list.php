@@ -29,6 +29,7 @@
             $headline_01 = get_sub_field('headline_01');
             $headline_02 = get_sub_field('headline_02');
             $headline_03 = get_sub_field('headline_03');
+            $text_content = get_sub_field('content');
         ?>
             <?php if($list_format == 'accordion') : ?>
                <!-- item -->
@@ -51,6 +52,7 @@
                                         echo $headline_03;
                                         echo '</p>';
                                     endif;
+                                    echo $text_content;
                                 ?>
                             </div>
                         </div>
@@ -58,8 +60,7 @@
                 </div>
         
             <!-- /item -->
-        
-        
+                
             <?php else : ?>
                 <div class="card <?php echo esc_attr($card_format['direction']); echo ' '; echo esc_attr($card_format['size']); echo ' '; echo esc_attr($card_format['style']); echo ' '; echo esc_attr($card_format['image']); echo ' '; echo esc_attr($card_format['icon']); ?>">
                     <div class="hold-card">
@@ -114,8 +115,10 @@
                                     echo $headline_03;
                                     echo '</p>';
                                 endif;
+                                echo $text_content;
                             ?>
                         </div>
+                        
                     </div>
                 </div>
             <?php endif; ?>
