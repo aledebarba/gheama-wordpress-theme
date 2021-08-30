@@ -857,7 +857,7 @@ img {
     opacity: 0.4; }
   [class^="widget-"].dark, [class^="widget-"].dark p, [class^="widget-"].dark a, [class^="widget-"].dark [class^="h"], [class^="widget-"].dark ul, [class^="widget-"].dark ol {
     color: white; }
-  [class^="widget-"].dark .hold {
+  [class^="widget-"].dark .hold, [class^="widget-"].dark .holdcenter {
     background: hsl(287, 45%, 25%); }
   [class^="widget-"].dark .button {
     color: hsl(287, 45%, 25%);
@@ -1727,16 +1727,6 @@ img {
             margin: 0 0 0 calc(2vmax * 1.25) !important;
             padding: 0 !important;
             border: 0 !important; } }
-  .widget-form .hold.center {
-    text-align: center; }
-    .widget-form .hold.center .button-hold {
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center; }
-  .widget-form .hold.full-height {
-    height: 100vh; }
-    .widget-form .hold.full-height .hold {
-      height: 100%; }
 
 .widget-layout .hold {
   display: -webkit-box;

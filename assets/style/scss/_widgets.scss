@@ -113,7 +113,7 @@
             color: $color-base-light;
         }
         
-        .hold {
+        .hold, .holdcenter {
             background: $color-content;
         }
         
@@ -1598,23 +1598,7 @@
             }
 		}
 		
-		    // center
-			&.center {
-				text-align: center;
 
-				.button-hold {
-					@include justify-content(center);
-				}
-			}
-
-			// full height
-			&.full-height {
-				height: 100vh;
-
-				.hold {
-					height: 100%;
-				}
-			}
 	}
 }
 
