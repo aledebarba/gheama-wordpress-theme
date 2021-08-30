@@ -2279,14 +2279,14 @@ img {
 .card.selected, .card.selected a {
   color: white; }
 .card.selected .hold-card {
-  background: hsl(280, 22%, 87%); }
+  background: hsl(347, 78%, 58%); }
 .card.selected.row .box-text {
   padding-top: calc(2.46vw * .9);
   padding-bottom: calc(2.46vw * .9); }
 .card.dark, .card.dark a {
   color: white; }
 .card.dark .hold-card {
-  background: hsl(280, 22%, 87%); }
+  background: hsl(287, 45%, 25%); }
 .card.dark.row .box-text {
   padding-top: calc(2.46vw * .9);
   padding-bottom: calc(2.46vw * .9); }
@@ -2308,6 +2308,10 @@ img {
   .card.clean.column.inverse .box-text {
     padding-top: 0;
     padding-bottom: calc(2.46vw * .6); }
+  .card.clean, .card.clean a {
+    color: white; }
+  .card.clean .hold-card {
+    background: hsl(280, 22%, 87%); }
   .card.clean.row .hold-card {
     -webkit-align-items: center;
     -moz-align-items: center;
