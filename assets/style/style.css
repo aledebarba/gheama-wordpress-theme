@@ -1321,6 +1321,7 @@ img {
         width: 100%; }
   .widget-list .hold-list.accordion {
     width: calc(100% - 28.56vw);
+    margin: auto;
     overflow: hidden;
     border-radius: 0.5em; }
   .widget-list .hold-list.mosaic {
