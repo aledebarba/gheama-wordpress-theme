@@ -930,7 +930,7 @@ img {
   [class^="widget-"].clean #contact-form .form-text textarea,
   [class^="widget-"].clean #contact-form .form-quiz input {
     color: hsl(287, 45%, 25%);
-    border-color: hsl(280, 22%, 87%);
+    border-color: hsl(287, 45%, 25%);
     background: transparent; }
   [class^="widget-"].clean #contact-form .form-button input {
     color: hsl(287, 45%, 25%) !important;
@@ -963,6 +963,8 @@ img {
       -webkit-flex-direction: column;
       -moz-flex-direction: column;
       flex-direction: column; }
+    [class^="widget-"].center #contact-form .form-button input {
+      margin: auto; }
   [class^="widget-"].full-height {
     height: 100vh; }
     [class^="widget-"].full-height .hold {

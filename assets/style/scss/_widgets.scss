@@ -260,7 +260,7 @@
             .form-text textarea,
             .form-quiz input {
                 color: $color-content;
-                border-color: $color-base; 
+                border-color: $color-content; 
                 background: transparent;
             }
             
@@ -300,6 +300,12 @@
 				@include flex-direction(column);
 
 			}
+			
+			.form-button {
+                input {
+                    margin: auto;
+                }
+            }
 		}
 		
     }
