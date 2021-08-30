@@ -1142,7 +1142,7 @@ img {
   .widget-article .box-image {
     width: 100%;
     height: 30vmax;
-    margin: 0 auto 2vmax auto;
+    margin: 2vmax auto 2vmax auto;
     order: 1 !important; } }
 .widget-article .box-image [class^="hold-"] img {
   position: absolute;

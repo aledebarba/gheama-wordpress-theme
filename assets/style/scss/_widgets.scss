@@ -578,7 +578,7 @@
         @include for-phone-only {
             width: 100%;
             height: 30vmax;
-            margin: 0 auto $space-mobile auto;
+            margin: $space-mobile auto $space-mobile auto;
 			order: 1!important;
         }
 
