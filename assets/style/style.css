@@ -1070,7 +1070,7 @@ img {
     align-items: center; }
     @media only screen and (max-device-width: 599px) {
       [class^="widget-"] .button-hold {
-        margin-top: 2vmax; } }
+        margin-top: auto; } }
     [class^="widget-"] .button-hold .button + .button {
       margin-left: calc(2.46vw * .3); }
     [class^="widget-"] .button-hold.button-loading .button {
@@ -1906,6 +1906,10 @@ img {
     height: 100%; }
     .widget-slide .item .box-text [class^="h"] + [class^="h"] {
       margin-top: calc(2.46vw * .3); }
+    @media only screen and (max-device-width: 599px) {
+      .widget-slide .item .box-text {
+        width: 100%;
+        text-align: center; } }
   .widget-slide .item .box-image,
   .widget-slide .item .box-video {
     overflow: hidden;
