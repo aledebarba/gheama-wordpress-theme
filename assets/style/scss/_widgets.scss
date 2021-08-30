@@ -730,6 +730,18 @@
                 &+.card {
 					margin-top: $space-x-small;
 				}
+				
+				.hold-card {
+					.box-text {
+						figure{
+							border-radius: $border-radius-regular;
+							
+							img {
+							margin-top: $space-small;
+							}
+						}
+					}
+				}
             }
 		}
         

@@ -1229,6 +1229,10 @@ img {
       width: 100%; }
       .widget-list .hold-list.list .card + .card {
         margin-top: calc(2.46vw * .6); }
+      .widget-list .hold-list.list .card .hold-card .box-text figure {
+        border-radius: 0.5em; }
+        .widget-list .hold-list.list .card .hold-card .box-text figure img {
+          margin-top: calc(2.46vw * .9); }
   .widget-list .hold-list.carousel {
     margin: calc(calc(2.46vw * 1.25) * -.25) 0 calc(calc(2.46vw * 3.25) * -1) 0;
     padding: calc(2.46vw * 1.25) 0 calc(2.46vw * 3.25) 0; }
