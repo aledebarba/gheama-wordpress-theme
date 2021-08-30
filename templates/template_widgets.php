@@ -83,7 +83,7 @@
                 if(($custom_background) == "video") :
             ?>
             <figure class="custom-background" role="presentation">
-                <video muted loop poster="<?php echo $background_poster;?>">
+                <video muted loop autoplay poster="<?php echo $background_poster;?>">
                     <source src="<?php echo $background_video; ?>" type="video/mp4">
                 </video>
             </figure>

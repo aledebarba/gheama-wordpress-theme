@@ -431,7 +431,7 @@ img {
             height: calc(4.5em * 1.05);
             padding: 0 calc(2.46vw * .6);
             color: hsl(280, 22%, 87%) !important;
-            font-size: calc(1em * .8);
+            font-size: calc(1em * .8) !important;
             font-weight: 900;
             line-height: 1.2;
             letter-spacing: .05em;
@@ -496,7 +496,7 @@ img {
       .header .menu-main ul > li > a {
         display: block;
         color: hsl(287, 45%, 25%);
-        font-size: calc(1em * 1.25);
+        font-size: 1em;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: .1em; }
@@ -696,7 +696,7 @@ img {
       margin-top: calc(2.46vw * 1.75); }
       .footer .hold-menu .menu-main ul li a,
       .footer .hold-menu .menu-social ul li a {
-        font-size: calc(1em * .7);
+        font-size: calc(1em * .8);
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: .1em; }
@@ -853,6 +853,8 @@ img {
       border-radius: 3em; }
   [class^="widget-"].default + .default .hold {
     padding-top: 0; }
+  [class^="widget-"].default video {
+    opacity: 0.4; }
   [class^="widget-"].dark, [class^="widget-"].dark p, [class^="widget-"].dark a, [class^="widget-"].dark [class^="h"], [class^="widget-"].dark ul, [class^="widget-"].dark ol {
     color: white; }
   [class^="widget-"].dark .hold {
@@ -878,6 +880,8 @@ img {
   [class^="widget-"].dark #contact-form .form-button input {
     color: hsl(287, 45%, 25%) !important;
     background: transparent; }
+  [class^="widget-"].dark video {
+    opacity: 0.6; }
   [class^="widget-"].selected, [class^="widget-"].selected p, [class^="widget-"].selected a, [class^="widget-"].selected [class^="h"], [class^="widget-"].selected ul, [class^="widget-"].selected ol {
     color: white; }
   [class^="widget-"].selected .hold {
@@ -903,13 +907,15 @@ img {
   [class^="widget-"].selected #contact-form .form-button input {
     color: hsl(347, 78%, 58%) !important;
     background: transparent; }
+  [class^="widget-"].selected video {
+    opacity: 0.6; }
   [class^="widget-"].clean, [class^="widget-"].clean p, [class^="widget-"].clean a, [class^="widget-"].clean [class^="h"], [class^="widget-"].clean ul, [class^="widget-"].clean ol {
     color: hsl(287, 45%, 25%); }
   [class^="widget-"].clean .hold {
     background: hsl(280, 22%, 87%); }
   [class^="widget-"].clean .button {
     color: hsl(287, 45%, 25%);
-    background-color: hsl(280, 22%, 87%);
+    background-color: transparent !important;
     padding: 0; }
     [class^="widget-"].clean .button.line {
       color: hsl(287, 45%, 25%);
@@ -929,6 +935,8 @@ img {
   [class^="widget-"].clean #contact-form .form-button input {
     color: hsl(287, 45%, 25%) !important;
     background: transparent; }
+  [class^="widget-"].clean video {
+    opacity: 0.4; }
   [class^="widget-"].center {
     text-align: center; }
     [class^="widget-"].center .button-hold {
@@ -1075,6 +1083,9 @@ img {
   content: '';
   z-index: 9; }
   .widget-article .custom-background img {
+    height: 100% !important;
+    width: auto; }
+  .widget-article .custom-background video {
     height: 100% !important;
     width: auto; }
 .widget-article .box-image,
@@ -1318,9 +1329,9 @@ img {
     .widget-list .hold-list.mosaic.col-33-66 .card:nth-child(even) {
       width: 66.666%; }
     .widget-list .hold-list.mosaic.col-66-33 .card:nth-child(odd) {
-      width: 33.333%; }
-    .widget-list .hold-list.mosaic.col-66-33 .card:nth-child(even) {
       width: 66.666%; }
+    .widget-list .hold-list.mosaic.col-66-33 .card:nth-child(even) {
+      width: 33.333%; }
 
 .widget-feed .headline-box {
   margin-bottom: 2.46vw; }
@@ -1929,6 +1940,24 @@ img {
   height: 100vh; }
 .widget-slide.full-height.stack .item {
   height: calc(100vh - (3.7vw * 2)); }
+
+.widget-shortcode .center.holdcenter.box-headline {
+  margin: auto !important; }
+.widget-shortcode .custom-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  z-index: -1;
+  opacity: 0.6; }
+  .widget-shortcode .custom-background .cover img {
+    height: 100% !important;
+    width: auto !important; }
+  .widget-shortcode .custom-background .cover video {
+    height: 100% !important;
+    width: auto !important; }
 
 .button {
   cursor: pointer;
