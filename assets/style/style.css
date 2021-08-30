@@ -1072,7 +1072,7 @@ img {
       [class^="widget-"] .button-hold {
         margin: auto;
         margin-top: 2vmax;
-        margin-bottom: 2vmax; } }
+        margin-bottom: calc(2vmax * 1.25); } }
     [class^="widget-"] .button-hold .button + .button {
       margin-left: calc(2.46vw * .3); }
     [class^="widget-"] .button-hold.button-loading .button {
