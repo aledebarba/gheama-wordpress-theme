@@ -1,5 +1,5 @@
 /*
-Error: Invalid CSS after "...nclude order(2)": expected "}", was "!important;"
+Error: Invalid CSS after "...clude order(2) ": expected "}", was "!important;"
         on line 528 of C:/Program Files (x86)/EasyPHP-Devserver-17/eds-modules/wordpress/wp-content/themes/2021-sabia-theme/assets/style/scss/_widgets.scss
         from line 6 of C:\Program Files (x86)\EasyPHP-Devserver-17\eds-modules\wordpress\wp-content\themes\2021-sabia-theme\assets\style\scss\style.scss
 
@@ -8,7 +8,7 @@ Error: Invalid CSS after "...nclude order(2)": expected "}", was "!important;"
 525:         @include for-phone-only {
 526:             width: auto !important;
 527:             padding: $space-mobile-large $space-xx-large;
-528: 			@include order(2)!important;
+528: 			@include order(2) !important;
 529:         }
 530:     }
 531: 	
@@ -75,4 +75,4 @@ C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...nclude order(2)\": expected \"}\", was \"!important;\"\A         on line 528 of C:/Program Files (x86)/EasyPHP-Devserver-17/eds-modules/wordpress/wp-content/themes/2021-sabia-theme/assets/style/scss/_widgets.scss\A         from line 6 of C:\Program Files (x86)\EasyPHP-Devserver-17\eds-modules\wordpress\wp-content\themes\2021-sabia-theme\assets\style\scss\style.scss\A \A 523: 		z-index: 90;\A 524:         \A 525:         @include for-phone-only {\A 526:             width: auto !important;\A 527:             padding: $space-mobile-large $space-xx-large;\A 528: 			@include order(2)!important;\A 529:         }\A 530:     }\A 531: 	\A 532: 	.custom-background {\A 533: 		position: absolute;"; }
+  content: "Error: Invalid CSS after \"...clude order(2) \": expected \"}\", was \"!important;\"\A         on line 528 of C:/Program Files (x86)/EasyPHP-Devserver-17/eds-modules/wordpress/wp-content/themes/2021-sabia-theme/assets/style/scss/_widgets.scss\A         from line 6 of C:\Program Files (x86)\EasyPHP-Devserver-17\eds-modules\wordpress\wp-content\themes\2021-sabia-theme\assets\style\scss\style.scss\A \A 523: 		z-index: 90;\A 524:         \A 525:         @include for-phone-only {\A 526:             width: auto !important;\A 527:             padding: $space-mobile-large $space-xx-large;\A 528: 			@include order(2) !important;\A 529:         }\A 530:     }\A 531: 	\A 532: 	.custom-background {\A 533: 		position: absolute;"; }
