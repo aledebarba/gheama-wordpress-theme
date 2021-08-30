@@ -1603,6 +1603,9 @@
 		
 		&.center {
 			.holdcenter{
+				@include flexbox ();
+				@include flex-direction (column);
+				
 				.box-form {
 					@include order(2);
 				}

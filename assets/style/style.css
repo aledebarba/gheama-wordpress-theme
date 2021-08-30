@@ -1727,16 +1727,24 @@ img {
             margin: 0 0 0 calc(2vmax * 1.25) !important;
             padding: 0 !important;
             border: 0 !important; } }
-.widget-form.center .holdcenter .box-form {
-  -webkit-order: 2;
-  -moz-order: 2;
-  order: 2; }
-.widget-form.center .holdcenter .box-side {
-  -webkit-order: 1;
-  -moz-order: 1;
-  order: 1; }
-  .widget-form.center .holdcenter .box-side .box-headline {
-    margin: auto; }
+.widget-form.center .holdcenter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column; }
+  .widget-form.center .holdcenter .box-form {
+    -webkit-order: 2;
+    -moz-order: 2;
+    order: 2; }
+  .widget-form.center .holdcenter .box-side {
+    -webkit-order: 1;
+    -moz-order: 1;
+    order: 1; }
+    .widget-form.center .holdcenter .box-side .box-headline {
+      margin: auto; }
 
 .widget-layout .hold {
   display: -webkit-box;
