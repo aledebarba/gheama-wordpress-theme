@@ -1108,7 +1108,8 @@ img {
   bottom: 0;
   left: 0;
   content: '';
-  z-index: 9; }
+  z-index: 9;
+  opacity: 0.6; }
   .widget-article .custom-background img {
     width: 100% !important;
     height: 100% !important;
