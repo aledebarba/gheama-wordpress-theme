@@ -497,6 +497,28 @@
             }
         }
     }
+	
+	.custom-background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		z-index: -1;
+		opacity: 0.6;
+		
+			img {
+				width: 100%!important;
+				height: auto!important;
+			}
+
+			video {
+				width: 100%!important;
+				height: auto!important;
+			}
+		
+	}
 }
 
 // article
@@ -1999,28 +2021,6 @@
 				padding-bottom: $space-regular;
 			}
 		}
-	}
-	
-	.custom-background {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		content: '';
-		z-index: -1;
-		opacity: 0.6;
-		
-			img {
-				width: 100%!important;
-				height: auto!important;
-			}
-
-			video {
-				width: 100%!important;
-				height: auto!important;
-			}
-		
 	}
 	
 }
