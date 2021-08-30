@@ -964,6 +964,8 @@ img {
       -webkit-flex-direction: column;
       -moz-flex-direction: column;
       flex-direction: column; }
+    [class^="widget-"].center #contact-form .form-text {
+      margin-bottom: calc(2.46vw * .9); }
     [class^="widget-"].center #contact-form .form-button {
       text-align: center;
       margin-bottom: 2.46vw;
