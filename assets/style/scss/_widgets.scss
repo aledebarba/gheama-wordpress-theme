@@ -1944,9 +1944,9 @@
 // shortcode
 .widget-shortcode {
 	
-	.center {
-		&.holdcenter{	
-			&.box-headline {
+	&.center {
+		.holdcenter{	
+			.box-headline {
 				margin: auto!important;
 			}
 		}
