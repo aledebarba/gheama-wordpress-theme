@@ -2409,7 +2409,7 @@ img {
     text-decoration: none; }
     .item-accordion .title-accordion:after {
       content: '+';
-      font-size: calc(1em * 1.25);
+      font-size: calc(1em * 1.75);
       line-height: 0;
       text-align: center;
       position: absolute;
