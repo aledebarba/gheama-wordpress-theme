@@ -834,16 +834,16 @@ img {
   z-index: 90; }
   [class^="widget-"] .hold {
     position: relative; }
-  [class^="widget-"].full .hold {
+  [class^="widget-"].full .hold, [class^="widget-"].full .holdcenter {
     padding: 3.7vw 7.14vw; }
     @media only screen and (max-device-width: 599px) {
-      [class^="widget-"].full .hold {
+      [class^="widget-"].full .hold, [class^="widget-"].full .holdcenter {
         padding: calc(2vmax * 1.25); } }
     @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait) {
-      [class^="widget-"].full .hold {
+      [class^="widget-"].full .hold, [class^="widget-"].full .holdcenter {
         padding: 3.7vw; } }
     @media only screen and (min-device-width: 900px) and (max-device-width: 1199px) and (orientation: landscape) {
-      [class^="widget-"].full .hold {
+      [class^="widget-"].full .hold, [class^="widget-"].full .holdcenter {
         padding: 3.7vw; } }
   [class^="widget-"].stack {
     padding: 0 7.14vw;
@@ -851,7 +851,7 @@ img {
     [class^="widget-"].stack .hold {
       padding: 3.7vw;
       border-radius: 3em; }
-  [class^="widget-"].default + .default .hold {
+  [class^="widget-"].default + .default .hold, [class^="widget-"].default + .default .holdcenter {
     padding-top: 0; }
   [class^="widget-"].default video {
     opacity: 0.4; }
@@ -884,7 +884,7 @@ img {
     opacity: 0.6; }
   [class^="widget-"].selected, [class^="widget-"].selected p, [class^="widget-"].selected a, [class^="widget-"].selected [class^="h"], [class^="widget-"].selected ul, [class^="widget-"].selected ol {
     color: white; }
-  [class^="widget-"].selected .hold {
+  [class^="widget-"].selected .hold, [class^="widget-"].selected .holdcenter {
     background: hsl(347, 78%, 58%); }
   [class^="widget-"].selected .button {
     color: hsl(347, 78%, 58%);
@@ -911,7 +911,7 @@ img {
     opacity: 0.6; }
   [class^="widget-"].clean, [class^="widget-"].clean p, [class^="widget-"].clean a, [class^="widget-"].clean [class^="h"], [class^="widget-"].clean ul, [class^="widget-"].clean ol {
     color: hsl(287, 45%, 25%); }
-  [class^="widget-"].clean .hold {
+  [class^="widget-"].clean .hold, [class^="widget-"].clean .holdcenter {
     background: hsl(280, 22%, 87%); }
   [class^="widget-"].clean .button {
     color: hsl(287, 45%, 25%);

@@ -63,7 +63,7 @@
     
     // full
     &.full {
-        .hold {
+        .hold, .holdcenter {
             padding: $margin-size-v $margin-size-h;
 
             @include for-phone-only {
@@ -97,7 +97,7 @@
         
         // fix padding top
         &+.default {
-            .hold {
+            .hold, .holdcenter {
                 padding-top: 0;
             }
         }
@@ -172,7 +172,7 @@
             color: $color-base-light;
         }
         
-        .hold {
+        .hold, .holdcenter {
             background: $color-brand;
         }
         
@@ -227,7 +227,7 @@
             color: $color-content;
         }
         
-        .hold {
+        .hold, .holdcenter {
             background: $color-base;
         }
         
