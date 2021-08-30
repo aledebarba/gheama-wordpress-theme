@@ -699,12 +699,12 @@
         
         &:after {
             content: '+';
-            font-size: $font-size-x-large;
+            font-size: $font-size-large;
             line-height: 0;
             text-align: center;
 
             position: absolute;
-            top: 50%;
+            top: 40%;
             right: 0;
             //width: 1em;
             @include transform(translateX(-50%));
