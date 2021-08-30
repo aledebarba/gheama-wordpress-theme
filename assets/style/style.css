@@ -1102,7 +1102,10 @@ img {
   @media only screen and (max-device-width: 599px) {
     .widget-article .box-text {
       width: auto !important;
-      padding: calc(2vmax * 1.25) calc(2.46vw * 3.25); } }
+      padding: calc(2vmax * 1.25) calc(2.46vw * 3.25);
+      -webkit-order: 2;
+      -moz-order: 2;
+      order: 2; } }
 .widget-article .custom-background {
   position: absolute;
   top: 0;
@@ -1141,7 +1144,8 @@ img {
   .widget-article .box-image {
     width: 100%;
     height: 30vmax;
-    margin: 0 auto 2vmax auto; } }
+    margin: 0 auto 2vmax auto;
+    order: 1; } }
 .widget-article .box-image [class^="hold-"] img {
   position: absolute;
   top: 50%;

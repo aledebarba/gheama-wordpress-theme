@@ -525,6 +525,7 @@
         @include for-phone-only {
             width: auto !important;
             padding: $space-mobile-large $space-xx-large;
+			@include order(2);
         }
     }
 	
@@ -578,6 +579,7 @@
             width: 100%;
             height: 30vmax;
             margin: 0 auto $space-mobile auto;
+			order: 1;
         }
 
         [class^="hold-"] {
