@@ -2415,6 +2415,7 @@ img {
       position: absolute;
       top: 50%;
       right: calc(2.46vw * .9);
+      width: 1em;
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
       transform: translateX(-50%); }
