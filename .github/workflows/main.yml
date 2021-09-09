@@ -16,4 +16,3 @@ jobs:
         username: alemacedo
         password: ${{ secrets.dreamhost_ftp }}
         dry-run: true
-Requirements
