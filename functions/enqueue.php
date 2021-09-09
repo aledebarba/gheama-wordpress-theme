@@ -2,7 +2,7 @@
 
 //** -- Remove -- ** //
 
-// Remove jQuery
+// Update jQuery
 add_action('wp_enqueue_scripts', 'theme_remove_default_jquery');
 function theme_remove_default_jquery() {
 	wp_deregister_script('jquery');
@@ -22,12 +22,7 @@ function theme_remove_styles() {
     wp_dequeue_style('wp-block-library');
 }
 
-//** -- Remove -- ** //
-
-
 //** -- Generate random version -- ** //
-
-use function PHPSTORM_META\type;
 
 // Get theme version
 function wpmix_get_version() {
@@ -49,20 +44,18 @@ global $random_number;
 
 //** -- Generate random version -- ** //
 
-
 // Style
 add_action('wp_enqueue_scripts', 'theme_enqueue_css');
 
 function theme_enqueue_css() {
     global $wp_styles;
     global $theme_version, $random_number;
-     
-    // Main Stylesheet
-    //wp_enqueue_style('main-css', get_stylesheet_directory_uri().'/assets/style/style.css', array(), null, 'all');
-    wp_enqueue_style('main-css', get_stylesheet_directory_uri().'/assets/style/style.css', false, $theme_version . $random_number);
+    wp_enqueue_style( "bootratrap",    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+    wp_enqueue_script( "bootstrap_js", "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", null, false, false );
+    wp_enqueue_style('main-css', get_stylesheet_directory_uri().'/assets/style/style.css', false, $theme_version.$random_number);
 }
 
-// Scripts
+// Scripts ACTUALLY Rellax and Flickity
 add_action('wp_enqueue_scripts', 'theme_enqueue_js', 90);
 
 function theme_enqueue_js() {
@@ -82,36 +75,24 @@ function theme_enqueue_js() {
     // Font Awesome
     wp_register_script('font-awesome', 'https://kit.fontawesome.com/f6e2c5467d.js', null, null, true);
     wp_enqueue_script('font-awesome');
+
+    //lottie
+    wp_register_script( 'lottie', "https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js", null, null, true );
+    wp_enqueue_script( 'lottie');
+
+    //3d
+    wp_register_script( 'model_viewer', "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js", null, null, true );
+    wp_enqueue_script( 'model_viewer');
 }
 
-
-/**
-* Add async or defer attributes to script enqueues
-* @author Mike Kormendy
-* @param  String  $tag     The original enqueued <script src="...> tag
-* @param  String  $handle  The registered unique name of the script
-* @return String  $tag     The modified <script async|defer src="...> tag
-*/
-// only on the front-end
-/*
-if(!is_admin()) {
-    function add_asyncdefer_attribute($tag, $handle) {
-        // if the unique handle/name of the registered script has 'async' in it
-        if (strpos($handle, 'async') !== false) {
-            // return the tag with the async attribute
-            return str_replace( '<script ', '<script async ', $tag );
-        }
-        // if the unique handle/name of the registered script has 'defer' in it
-        else if (strpos($handle, 'defer') !== false) {
-            // return the tag with the defer attribute
-            return str_replace( '<script ', '<script defer ', $tag );
-        }
-        // otherwise skip
-        else {
-            return $tag;
-        }
+add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
+function add_type_attribute($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    if ( 'model_viewer' !== $handle ) {
+        return $tag;
     }
-    add_filter('script_loader_tag', 'add_asyncdefer_attribute', 10, 2);
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+    return $tag;
 }
-*/
 ?>

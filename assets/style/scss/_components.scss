@@ -1,759 +1,759 @@
-// button
-.button {
-    cursor: pointer;
+// // button
+// .button {
+//     cursor: pointer;
 	
-    overflow: hidden;
-    position: relative;
+//     overflow: hidden;
+//     position: relative;
 
-    @include flexinline();
-    @include align-items(center);
-    @include justify-content(center);
+//     @include flexinline();
+//     @include align-items(center);
+//     @include justify-content(center);
 
-    min-height: $button-size;
-    min-width: $button-size;
-    margin: 0;
-    padding: 0 $button-padding;
-	//padding-top: .15em;
+//     min-height: $button-size;
+//     min-width: $button-size;
+//     margin: 0;
+//     padding: 0 $button-padding;
+// 	//padding-top: .15em;
 
-    border: $button-border-size solid transparent;
+//     border: $button-border-size solid transparent;
 
-    color: $button-color;
+//     color: $button-color;
 
-	font-weight: $button-font-weight;
-    font-size: $button-font-size;
-    font-family: $button-font-family;
-    line-height: 1;
-    @include text-transform();
-	text-align: center;
-    text-decoration: none;
+// 	font-weight: $button-font-weight;
+//     font-size: $button-font-size;
+//     font-family: $button-font-family;
+//     line-height: 1;
+//     @include text-transform();
+// 	text-align: center;
+//     text-decoration: none;
 
-    background-color: $button-background;
-    border-radius: $border-radius-button;
+//     background-color: $button-background;
+//     border-radius: $border-radius-button;
     
-    @include shadow-box();
+//     @include shadow-box();
 
-	@include for-phone-only {
-		height: $button-size-mobile;
-		font-size: $button-font-size-mobile;
-	}
+// 	@include for-phone-only {
+// 		height: $button-size-mobile;
+// 		font-size: $button-font-size-mobile;
+// 	}
     
-    span+span {
-        margin-left: calc(#{$button-padding} * .5);
-    }
+//     span+span {
+//         margin-left: calc(#{$button-padding} * .5);
+//     }
     
-    // -- size -- //
-    &.x-small {
-		font-size: calc(#{$button-font-size} * .75);
+//     // -- size -- //
+//     &.x-small {
+// 		font-size: calc(#{$button-font-size} * .75);
 		
-		@include for-phone-only {
-			height: $button-size-mobile;
-            font-size: calc(#{$button-font-size-mobile} * .75);
-		}
-    }
+// 		@include for-phone-only {
+// 			height: $button-size-mobile;
+//             font-size: calc(#{$button-font-size-mobile} * .75);
+// 		}
+//     }
     
-    &.small {
-		font-size: calc(#{$button-font-size} * .85);
+//     &.small {
+// 		font-size: calc(#{$button-font-size} * .85);
 		
-		@include for-phone-only {
-			height: $button-size-mobile;
-            font-size: calc(#{$button-font-size-mobile} * .9);
-		}
-    }
+// 		@include for-phone-only {
+// 			height: $button-size-mobile;
+//             font-size: calc(#{$button-font-size-mobile} * .9);
+// 		}
+//     }
 	
-	&.large {
-		font-size: calc(#{$button-font-size} * 1.15);
+// 	&.large {
+// 		font-size: calc(#{$button-font-size} * 1.15);
 		
-		@include for-phone-only {
-			height: $button-size-mobile;
-            font-size: calc(#{$button-font-size-mobile} * 1.1);
-		}
-    }
+// 		@include for-phone-only {
+// 			height: $button-size-mobile;
+//             font-size: calc(#{$button-font-size-mobile} * 1.1);
+// 		}
+//     }
     
-    &.x-large {
-		font-size: calc(#{$button-font-size} * 1.25);
+//     &.x-large {
+// 		font-size: calc(#{$button-font-size} * 1.25);
 		
-		@include for-phone-only {
-			//height: $button-size-mobile;
-            //font-size: calc(#{$button-font-size-mobile} * 1.1);
-		}
-    }
-    // -- size -- //
+// 		@include for-phone-only {
+// 			//height: $button-size-mobile;
+//             //font-size: calc(#{$button-font-size-mobile} * 1.1);
+// 		}
+//     }
+//     // -- size -- //
 
-    // -- icon -- //
-	svg {
-        &.fa-spin {
-            top: auto;
-            @include transform(translateY(0));
-        }
+//     // -- icon -- //
+// 	svg {
+//         &.fa-spin {
+//             top: auto;
+//             @include transform(translateY(0));
+//         }
 		
-		margin-top: .1em;
-    }
+// 		margin-top: .1em;
+//     }
 
-    &.icon {
-		svg {
-            //left: 50%;
-            //@include transform(translate(-50%,-50%));
-        }
-    }
-    // -- icon -- //
+//     &.icon {
+// 		svg {
+//             //left: 50%;
+//             //@include transform(translate(-50%,-50%));
+//         }
+//     }
+//     // -- icon -- //
     
-    // -- classes -- //
-    &.line {
-        border-color: $button-background;
-        color: $button-background;
-        background-color: transparent !important;
+//     // -- classes -- //
+//     &.line {
+//         border-color: $button-background;
+//         color: $button-background;
+//         background-color: transparent !important;
         
-        @include reset-shadow-box();
-    }
+//         @include reset-shadow-box();
+//     }
     
-    &.selected {
-        color: $color-base;
-		background: $button-extra;
-	}
+//     &.selected {
+//         color: $color-base;
+// 		background: $button-extra;
+// 	}
     
-    &.clean {
-        min-height: calc(#{$button-size} * .5);
-        //min-height: 1px;
-        height: auto;
-        padding: 0!important;
-        border-width: 0 !important;
-        color: $button-background !important;
-        background: transparent !important;
-		border-radius: 0 !important;
-        box-shadow: none;
+//     &.clean {
+//         min-height: calc(#{$button-size} * .5);
+//         //min-height: 1px;
+//         height: auto;
+//         padding: 0!important;
+//         border-width: 0 !important;
+//         color: $button-background !important;
+//         background: transparent !important;
+// 		border-radius: 0 !important;
+//         box-shadow: none;
         
-        &.icon-start  {
-            svg {
-                margin-right: $space-xx-small;
-            }
-        }
+//         &.icon-start  {
+//             svg {
+//                 margin-right: $space-xx-small;
+//             }
+//         }
 
-        &.icon-end  {
-            svg {
-                margin-left: $space-xx-small;
-            }
-        }
-    }
+//         &.icon-end  {
+//             svg {
+//                 margin-left: $space-xx-small;
+//             }
+//         }
+//     }
 	
-	&.round {
-		border-radius: $border-radius-large;
-		//padding: 0 3em;
+// 	&.round {
+// 		border-radius: $border-radius-large;
+// 		//padding: 0 3em;
 		
-		@include for-phone-only {
-			padding: 0 1.75em;
-		}
-	}
-    // -- classes -- //
+// 		@include for-phone-only {
+// 			padding: 0 1.75em;
+// 		}
+// 	}
+//     // -- classes -- //
     
-    // -- social media -- //
-	&.facebook {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(66,103,178) !important;
-    }
+//     // -- social media -- //
+// 	&.facebook {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(66,103,178) !important;
+//     }
 	
-	&.google {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(66,133,244) !important;
-    }
+// 	&.google {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(66,133,244) !important;
+//     }
 	
-	&.instagram {
-		color: white !important;
-        border-color: transparent !important;
-        background: rgb(84,89,210) !important;
-		background: radial-gradient(circle, rgba(84,89,210,1) 0%, rgba(214,45,128,1) 100%) !important;
-    }
+// 	&.instagram {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background: rgb(84,89,210) !important;
+// 		background: radial-gradient(circle, rgba(84,89,210,1) 0%, rgba(214,45,128,1) 100%) !important;
+//     }
 	
-	&.linkedin {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(0,97,146) !important;
-    }
+// 	&.linkedin {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(0,97,146) !important;
+//     }
 	
-    &.spotify {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(30,215,96) !important;
-    }
+//     &.spotify {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(30,215,96) !important;
+//     }
 
-    &.twitter {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(56,161,243) !important;
-    }
+//     &.twitter {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(56,161,243) !important;
+//     }
 
-    &.whatsapp {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(37,211,102) !important;
-    }
+//     &.whatsapp {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(37,211,102) !important;
+//     }
 	
-	&.youtube {
-		color: white !important;
-        border-color: transparent !important;
-        background-color: rgb(255,0,0) !important;
-    }
-    // -- social media -- //
-}
+// 	&.youtube {
+// 		color: white !important;
+//         border-color: transparent !important;
+//         background-color: rgb(255,0,0) !important;
+//     }
+//     // -- social media -- //
+// }
 
-// -- cards --//
-.card {
-    @include for-phone-only {
+// // -- cards --//
+// .card {
+//     @include for-phone-only {
         
-    }
+//     }
     
-    .hold-card {
-        @include flexbox();
-        @include align-items(stretch);
+//     .hold-card {
+//         @include flexbox();
+//         @include align-items(stretch);
         
-        overflow: hidden;
-        height: 100%;
+//         overflow: hidden;
+//         height: 100%;
         
-        border-radius: $border-radius-regular;
-    }
+//         border-radius: $border-radius-regular;
+//     }
 
-    .box-image,
-    .box-icon {
-        overflow: hidden;
+//     .box-image,
+//     .box-icon {
+//         overflow: hidden;
         
-        [class^="hold-"] {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-    }
+//         [class^="hold-"] {
+//             overflow: hidden;
+//             position: relative;
+//             width: 100%;
+//         }
+//     }
 
-    .box-image {
-        [class^="hold-"] {
-            img {
-                @include img-center();
-                z-index: 100;
-            }
-        }
-    }
+//     .box-image {
+//         [class^="hold-"] {
+//             img {
+//                 @include img-center();
+//                 z-index: 100;
+//             }
+//         }
+//     }
 
-    .box-icon {    
-        [class^="hold-"] {
-            @include flexbox();
-            @include align-items(center);
-            @include justify-content(center);
-        }
+//     .box-icon {    
+//         [class^="hold-"] {
+//             @include flexbox();
+//             @include align-items(center);
+//             @include justify-content(center);
+//         }
         
-        svg {
-            width: auto !important;
-        }
-    }
+//         svg {
+//             width: auto !important;
+//         }
+//     }
 
-    .box-text {
-        @include flex-grow(1);
+//     .box-text {
+//         @include flex-grow(1);
 
-        [class^="h"] {}
+//         [class^="h"] {}
 
-        > p {
-            margin-top: $space-xx-small;
-        }
-    }
+//         > p {
+//             margin-top: $space-xx-small;
+//         }
+//     }
     
-    // -- direction --//
-    &.column {
-        .hold-card {
-            @include flex-direction(column);
-        }
+//     // -- direction --//
+//     &.column {
+//         .hold-card {
+//             @include flex-direction(column);
+//         }
         
-        .box-image,
-        .box-icon {
-            width: 100%;
-        }
+//         .box-image,
+//         .box-icon {
+//             width: 100%;
+//         }
         
-        .box-text {
-            padding: $space-small;
-        }
+//         .box-text {
+//             padding: $space-small;
+//         }
         
-        &.inverse {
-            .box-image,
-            .box-icon {
-                @include order(2);
-            }
+//         &.inverse {
+//             .box-image,
+//             .box-icon {
+//                 @include order(2);
+//             }
             
-            .box-text {
-                @include order(1);
-            }
-        }
-    }
+//             .box-text {
+//                 @include order(1);
+//             }
+//         }
+//     }
     
-    &.row {
-        .box-image,
-        .box-icon {
-            height: 100%;
+//     &.row {
+//         .box-image,
+//         .box-icon {
+//             height: 100%;
             
-            [class^="hold-"] {
-                height: 100%;
-            }
-        }
+//             [class^="hold-"] {
+//                 height: 100%;
+//             }
+//         }
         
-        .box-text {
-            padding: 0 $space-small;
-        }
+//         .box-text {
+//             padding: 0 $space-small;
+//         }
         
-        &.inverse {
-            .box-image,
-            .box-icon {
-                @include order(2);
-            }
+//         &.inverse {
+//             .box-image,
+//             .box-icon {
+//                 @include order(2);
+//             }
             
-            .box-text {
-                @include order(1);
-            }
-        }
-    }
-    // -- direction --//
+//             .box-text {
+//                 @include order(1);
+//             }
+//         }
+//     }
+//     // -- direction --//
     
-    // -- size --//
-    &.regular {
+//     // -- size --//
+//     &.regular {
         
-    }
+//     }
     
-    &.small {
-        .box-text {
-            font-size: $font-size-x-small;
-        }
-    }
+//     &.small {
+//         .box-text {
+//             font-size: $font-size-x-small;
+//         }
+//     }
     
-    &.large {
-        .box-text {
-            font-size: $font-size-large;
-        }
-    }
-    // -- size --//
+//     &.large {
+//         .box-text {
+//             font-size: $font-size-large;
+//         }
+//     }
+//     // -- size --//
     
-    // -- style --//
-    &.default {
-        .hold-card {
-            background: rgba(255, 255, 255, .25);
-            @include shadow-box();
-        }
+//     // -- style --//
+//     &.default {
+//         .hold-card {
+//             background: rgba(255, 255, 255, .25);
+//             @include shadow-box();
+//         }
         
-        .box-icon {
-            background-color: $color-base-opacity;
-        }
+//         .box-icon {
+//             background-color: $color-base-opacity;
+//         }
         
-        &.row {
-            .box-text {
-                padding-top: $space-small;
-                padding-bottom: $space-small;
-            }
-        }
-    }
+//         &.row {
+//             .box-text {
+//                 padding-top: $space-small;
+//                 padding-bottom: $space-small;
+//             }
+//         }
+//     }
     
-    &.line {
-        .hold-card {
-            border: $button-border-size solid $color-base-dark;
-        }
+//     &.line {
+//         .hold-card {
+//             border: $button-border-size solid $color-base-dark;
+//         }
         
-        .box-image {
-            height: 100% !important;
+//         .box-image {
+//             height: 100% !important;
             
-            [class^="hold-"] {
-                height: 100% !important;
-                padding-bottom: 0 !important;
-            }
-        }
+//             [class^="hold-"] {
+//                 height: 100% !important;
+//                 padding-bottom: 0 !important;
+//             }
+//         }
         
-        .box-icon {
-            @include reset-shadow-box();
+//         .box-icon {
+//             @include reset-shadow-box();
             
-            svg {
-                //color: $color-base-dark;
-            }
-        }
+//             svg {
+//                 //color: $color-base-dark;
+//             }
+//         }
         
-        &.column {
-            .box-image,
-            .box-icon {
-                border-bottom: $button-border-size solid $color-base-dark;
-            }
+//         &.column {
+//             .box-image,
+//             .box-icon {
+//                 border-bottom: $button-border-size solid $color-base-dark;
+//             }
             
-            &.inverse {
-                .box-image,
-                .box-icon {
-                    border-top: $button-border-size solid $color-base-dark;
-                    border-bottom: none;
-                }
-            }
-        }
+//             &.inverse {
+//                 .box-image,
+//                 .box-icon {
+//                     border-top: $button-border-size solid $color-base-dark;
+//                     border-bottom: none;
+//                 }
+//             }
+//         }
         
-        &.row {
-            .box-image,
-            .box-icon {
-                border-right: $button-border-size solid $color-base-dark;
-            }
+//         &.row {
+//             .box-image,
+//             .box-icon {
+//                 border-right: $button-border-size solid $color-base-dark;
+//             }
             
-            .box-text {
-                padding-top: $space-small;
-                padding-bottom: $space-small;
-            }
+//             .box-text {
+//                 padding-top: $space-small;
+//                 padding-bottom: $space-small;
+//             }
             
-            &.inverse {
-                .box-image,
-                .box-icon {
-                    border-right: none;
-                    border-left: $button-border-size solid $color-base-dark;
-                }
-            }
-        }
-    }
+//             &.inverse {
+//                 .box-image,
+//                 .box-icon {
+//                     border-right: none;
+//                     border-left: $button-border-size solid $color-base-dark;
+//                 }
+//             }
+//         }
+//     }
     
-    &.selected {
-        &, a {
-            color: $color-base-light;
-        }
+//     &.selected {
+//         &, a {
+//             color: $color-base-light;
+//         }
         
-        .hold-card {
-            background: $color-brand;
-            @include shadow-box();
-        }
+//         .hold-card {
+//             background: $color-brand;
+//             @include shadow-box();
+//         }
         
-         &.row {
-            .box-text {
-                padding-top: $space-small;
-                padding-bottom: $space-small;
-            }
-        }
-    }
+//          &.row {
+//             .box-text {
+//                 padding-top: $space-small;
+//                 padding-bottom: $space-small;
+//             }
+//         }
+//     }
     
-    &.dark {
-        &, a {
-            color: $color-base-light;
-        }
+//     &.dark {
+//         &, a {
+//             color: $color-base-light;
+//         }
         
-        .hold-card {
-            background: $color-content;
-            @include shadow-box();
-        }
+//         .hold-card {
+//             background: $color-content;
+//             @include shadow-box();
+//         }
         
-         &.row {
-            .box-text {
-                padding-top: $space-small;
-                padding-bottom: $space-small;
-            }
-        }
-    }
+//          &.row {
+//             .box-text {
+//                 padding-top: $space-small;
+//                 padding-bottom: $space-small;
+//             }
+//         }
+//     }
     
-    &.clean {
-        @include reset-shadow-box();
+//     &.clean {
+//         @include reset-shadow-box();
         
-        .box-icon {
-            @include reset-shadow-box();
-        }
+//         .box-icon {
+//             @include reset-shadow-box();
+//         }
         
-        &.column {
-            .box-image,
-            .box-icon {
-                [class^="hold-"] {
-                    border-radius: 0 0 $border-radius-regular $border-radius-regular;
-                }
-            }
+//         &.column {
+//             .box-image,
+//             .box-icon {
+//                 [class^="hold-"] {
+//                     border-radius: 0 0 $border-radius-regular $border-radius-regular;
+//                 }
+//             }
             
-            .box-text {
-                padding-top: $space-x-small;
-                padding-right: 0;
-                padding-bottom: 0;
-                padding-left: 0;
-            }
+//             .box-text {
+//                 padding-top: $space-x-small;
+//                 padding-right: 0;
+//                 padding-bottom: 0;
+//                 padding-left: 0;
+//             }
             
-            &.inverse {
-                .box-image,
-                .box-icon {
-                    [class^="hold-"] {
-                        border-radius: $border-radius-regular $border-radius-regular 0 0;
-                    }
-                }
+//             &.inverse {
+//                 .box-image,
+//                 .box-icon {
+//                     [class^="hold-"] {
+//                         border-radius: $border-radius-regular $border-radius-regular 0 0;
+//                     }
+//                 }
                 
-                .box-text {
-                    padding-top: 0;
-                    padding-bottom: $space-x-small;
-                }
+//                 .box-text {
+//                     padding-top: 0;
+//                     padding-bottom: $space-x-small;
+//                 }
                 
-            }
-        }
+//             }
+//         }
 		
-		&, a {
-            color: $color-base-light;
-        }
+// 		&, a {
+//             color: $color-base-light;
+//         }
         
-        .hold-card {
-            background: $color-base;
-            @include shadow-box();
-        }
+//         .hold-card {
+//             background: $color-base;
+//             @include shadow-box();
+//         }
         
-        &.row {
-            .hold-card {
-                @include align-items(center);
-            }
+//         &.row {
+//             .hold-card {
+//                 @include align-items(center);
+//             }
             
-            .box-image,
-            .box-icon {
-                [class^="hold-"] {
-                    //border-radius: 0 $border-radius-regular $border-radius-regular 0;
-                    border-radius: $border-radius-regular;
-                }
-            }
+//             .box-image,
+//             .box-icon {
+//                 [class^="hold-"] {
+//                     //border-radius: 0 $border-radius-regular $border-radius-regular 0;
+//                     border-radius: $border-radius-regular;
+//                 }
+//             }
             
-            &.inverse {
-                .box-image,
-                .box-icon {
-                    [class^="hold-"] {
-                        border-radius: $border-radius-regular 0 0 $border-radius-regular;
-                    }
-                }
-            }
-        }
-    }
-    // -- style --//
+//             &.inverse {
+//                 .box-image,
+//                 .box-icon {
+//                     [class^="hold-"] {
+//                         border-radius: $border-radius-regular 0 0 $border-radius-regular;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     // -- style --//
     
-    // -- image, icon --//
-    &.image-landscape {
-        &.column {
-            .box-image {
-                [class^="hold-"] {
-                    padding-bottom: 56.25%;
-                }
-            }
-        }
+//     // -- image, icon --//
+//     &.image-landscape {
+//         &.column {
+//             .box-image {
+//                 [class^="hold-"] {
+//                     padding-bottom: 56.25%;
+//                 }
+//             }
+//         }
         
-        &.row {
-            .box-image {
-                width: 50%;
-                //height: auto;
+//         &.row {
+//             .box-image {
+//                 width: 50%;
+//                 //height: auto;
                     
-                [class^="hold-"] {
-                    height: 0;
-                    padding-bottom: 56.25%;
-                }
+//                 [class^="hold-"] {
+//                     height: 0;
+//                     padding-bottom: 56.25%;
+//                 }
                     
-            }
+//             }
             
-            .box-text {
-                width: 50%;
-            }
-        }
-    }
+//             .box-text {
+//                 width: 50%;
+//             }
+//         }
+//     }
     
-    &.image-portrait {
-        &.column {
-            .box-image {
-                [class^="hold-"] {
-                    padding-bottom: 125%;
-                }
-            }
-        }
+//     &.image-portrait {
+//         &.column {
+//             .box-image {
+//                 [class^="hold-"] {
+//                     padding-bottom: 125%;
+//                 }
+//             }
+//         }
         
-        &.row {
-            .box-image {
-                width: 50%;
-                height: auto;
+//         &.row {
+//             .box-image {
+//                 width: 50%;
+//                 height: auto;
                 
-                [class^="hold-"] {
-                    padding-bottom: 125%;
-                }
-            }
+//                 [class^="hold-"] {
+//                     padding-bottom: 125%;
+//                 }
+//             }
             
-            .box-text {
-                width: 50%;
-            }
-        }
-    }
+//             .box-text {
+//                 width: 50%;
+//             }
+//         }
+//     }
     
-    &.image-square {
-        &.column {
-            .box-image {
-                [class^="hold-"] {
-                    padding-bottom: 100%;
-                }
-            }
-        }
+//     &.image-square {
+//         &.column {
+//             .box-image {
+//                 [class^="hold-"] {
+//                     padding-bottom: 100%;
+//                 }
+//             }
+//         }
         
-        &.row {
-            .box-image {
-                width: 50%;
-                height: auto;
+//         &.row {
+//             .box-image {
+//                 width: 50%;
+//                 height: auto;
                     
-                [class^="hold-"] {
-                    height: 0;
-                    padding-bottom: 100%;
-                }
+//                 [class^="hold-"] {
+//                     height: 0;
+//                     padding-bottom: 100%;
+//                 }
                     
-            }
+//             }
             
-            .box-text {
-                width: 50%;
-            }
-        }
-    }
+//             .box-text {
+//                 width: 50%;
+//             }
+//         }
+//     }
     
-    &.image-round {
-        .box-image {
-            [class^="hold-"] {
-                border-radius: 100% !important;
-            }
-        }
-    }
+//     &.image-round {
+//         .box-image {
+//             [class^="hold-"] {
+//                 border-radius: 100% !important;
+//             }
+//         }
+//     }
     
-    &.icon-small {
-        .box-icon {
-            padding: $space-large;
-            @include shadow-box();
+//     &.icon-small {
+//         .box-icon {
+//             padding: $space-large;
+//             @include shadow-box();
             
-            svg {
-                height: 1.5vmax !important;
-            }
-        }
+//             svg {
+//                 height: 1.5vmax !important;
+//             }
+//         }
         
-        &.row {
-            .box-icon {
-                padding: 0;
-                width: 25%;
-            }
+//         &.row {
+//             .box-icon {
+//                 padding: 0;
+//                 width: 25%;
+//             }
             
-            .box-text {
-                width: 75%;
-            }
-        }
-    }
+//             .box-text {
+//                 width: 75%;
+//             }
+//         }
+//     }
     
-    &.icon-regular {
-        .box-icon {
-            padding: $space-large;
-            @include shadow-box();
+//     &.icon-regular {
+//         .box-icon {
+//             padding: $space-large;
+//             @include shadow-box();
             
-            svg {
-                height: 2.5vmax !important;
-            }
-        }
+//             svg {
+//                 height: 2.5vmax !important;
+//             }
+//         }
         
-        &.row {
-            .box-icon {
-                padding: 0;
-                width: 33.333%;
-            }
+//         &.row {
+//             .box-icon {
+//                 padding: 0;
+//                 width: 33.333%;
+//             }
             
-            .box-text {
-                width: 66.666%;
-            }
-        }
-    }
+//             .box-text {
+//                 width: 66.666%;
+//             }
+//         }
+//     }
     
-    &.icon-large {
-        .box-icon {
-            padding: $space-x-large;
-            @include shadow-box();
+//     &.icon-large {
+//         .box-icon {
+//             padding: $space-x-large;
+//             @include shadow-box();
             
-            svg {
-                height: 3.5vmax !important;
-            }
-        }
+//             svg {
+//                 height: 3.5vmax !important;
+//             }
+//         }
         
-        &.row {
-            .box-icon {
-                padding: 0;
-                width: 50%;
-            }
+//         &.row {
+//             .box-icon {
+//                 padding: 0;
+//                 width: 50%;
+//             }
             
-            .box-text {
-                width: 50%;
-            }
-        }
-    }
-    // -- image, icon --//
-}
+//             .box-text {
+//                 width: 50%;
+//             }
+//         }
+//     }
+//     // -- image, icon --//
+// }
 
-// -- items --//
-.item-accordion {
-    width: 100%;
+// // -- items --//
+// .item-accordion {
+//     width: 100%;
     
-    .title-accordion {
-        cursor: pointer;
+//     .title-accordion {
+//         cursor: pointer;
 	
-        overflow: hidden;
-        position: relative;
+//         overflow: hidden;
+//         position: relative;
 
-        @include flexbox();
-        @include align-items(center);
-        @include justify-content(flex-start);
+//         @include flexbox();
+//         @include align-items(center);
+//         @include justify-content(flex-start);
 
-        min-height: $button-size;
-        min-width: $button-size;
-        margin: 0;
-        padding: 0 $space-small;
-        padding-top: .15em;
+//         min-height: $button-size;
+//         min-width: $button-size;
+//         margin: 0;
+//         padding: 0 $space-small;
+//         padding-top: .15em;
 
-        border: $button-border-size solid transparent;
+//         border: $button-border-size solid transparent;
 
-        font-weight: $button-font-weight;
-        font-size: $font-size-regular;
-        font-family: $button-font-family;
-        line-height: 1;
-        //@include text-transform();
-        text-decoration: none;
+//         font-weight: $button-font-weight;
+//         font-size: $font-size-regular;
+//         font-family: $button-font-family;
+//         line-height: 1;
+//         //@include text-transform();
+//         text-decoration: none;
         
-        &:after {
-            content: '+';
-            font-size: $font-size-large;
-            line-height: 0;
-            text-align: center;
+//         &:after {
+//             content: '+';
+//             font-size: $font-size-large;
+//             line-height: 0;
+//             text-align: center;
 
-            position: absolute;
-            top: 40%;
-            right: 0;
-            //width: 1em;
-            @include transform(translateX(-50%));
-        }
+//             position: absolute;
+//             top: 40%;
+//             right: 0;
+//             //width: 1em;
+//             @include transform(translateX(-50%));
+//         }
 
-        &.active:after {
-            content: "-";
-        }        
-    }
+//         &.active:after {
+//             content: "-";
+//         }        
+//     }
 
-    .panel-accordion {
-        overflow: hidden;
-        max-height: 0;
+//     .panel-accordion {
+//         overflow: hidden;
+//         max-height: 0;
         
-        transition: max-height .2s ease-out;
+//         transition: max-height .2s ease-out;
 
-        .box-accordion {
-            padding: $space-small;
-        }
-    }
+//         .box-accordion {
+//             padding: $space-small;
+//         }
+//     }
     
-    // -- style --//
-    &.default {
-        .title-accordion {
-            color: $button-color;
-            background-color: $button-background;
+//     // -- style --//
+//     &.default {
+//         .title-accordion {
+//             color: $button-color;
+//             background-color: $button-background;
 
-            &.active,
-            &:hover {
-                color: $color-base;
-                background: $color-content;
-            }
-        }
+//             &.active,
+//             &:hover {
+//                 color: $color-base;
+//                 background: $color-content;
+//             }
+//         }
         
-        .panel-accordion {
+//         .panel-accordion {
             
-        }
-    }
+//         }
+//     }
     
-    &.line {
-    }
+//     &.line {
+//     }
     
-    &.selected {
-    }
+//     &.selected {
+//     }
     
-    &.dark {
-    }
+//     &.dark {
+//     }
     
-    &.clean {
-    }
-    // -- style --//
-}
+//     &.clean {
+//     }
+//     // -- style --//
+// }

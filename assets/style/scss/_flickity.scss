@@ -1,137 +1,137 @@
-// flickity
-.flickity-enabled {
-	position: relative;
+// // flickity
+// .flickity-enabled {
+// 	position: relative;
 	
-	&:focus {
-		outline: none;
-	}
-}
+// 	&:focus {
+// 		outline: none;
+// 	}
+// }
 
-.flickity-viewport {
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	height: 165px;
-}
+// .flickity-viewport {
+// 	overflow: hidden;
+// 	position: relative;
+// 	width: 100%;
+// 	height: 165px;
+// }
 
-.flickity-slider {
-	position: absolute;
-	width: 100%;
-	height: 165px;
-}
+// .flickity-slider {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 165px;
+// }
 
-.flickity-enabled.is-draggable {
-	-webkit-tap-highlight-color: transparent;
-	tap-highlight-color: transparent;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+// .flickity-enabled.is-draggable {
+// 	-webkit-tap-highlight-color: transparent;
+// 	tap-highlight-color: transparent;
+// 	-webkit-user-select: none;
+// 	-moz-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
 	
-	.flickity-viewport {
-		cursor: move;
-		cursor: webkit-grab;
-		cursor: grab;
-	}
+// 	.flickity-viewport {
+// 		cursor: move;
+// 		cursor: webkit-grab;
+// 		cursor: grab;
+// 	}
 	
-	.flickity-viewport.is-pointer-down {
-		cursor: -webkit-grabbing;
-		cursor: grabbing;
-	}
-}
+// 	.flickity-viewport.is-pointer-down {
+// 		cursor: -webkit-grabbing;
+// 		cursor: grabbing;
+// 	}
+// }
 
-.flickity-prev-next-button {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: 1.5em;
-	padding: 0;
-	border: none;
-	background: none;
-	@include transform(translateY(-50%));
+// .flickity-prev-next-button {
+// 	cursor: pointer;
+// 	position: absolute;
+// 	top: 50%;
+// 	width: 1.5em;
+// 	padding: 0;
+// 	border: none;
+// 	background: none;
+// 	@include transform(translateY(-50%));
 	
-	&:hover {
+// 	&:hover {
 		
-	}
+// 	}
 	
-	&.previous {
-		left: $space-x-small;
-	}
+// 	&.previous {
+// 		left: $space-x-small;
+// 	}
 	
-	&.next {
-		right: $space-x-small;
-	}
+// 	&.next {
+// 		right: $space-x-small;
+// 	}
 	
-	svg {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		display: block;
-		width: 100%;
-		@include transform(translate(-50%, -50%));
-	}
+// 	svg {
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		display: block;
+// 		width: 100%;
+// 		@include transform(translate(-50%, -50%));
+// 	}
 	
-	.arrow {
-		fill: $color-content-light;
-        //opacity: .25
-	}
-}
+// 	.arrow {
+// 		fill: $color-content-light;
+//         //opacity: .25
+// 	}
+// }
 
-.flickity-page-dots {
-	position: absolute;
-	width: 100%;
-	//bottom: -25px;
-	bottom: $space-xx-small;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	text-align: center;
-	line-height: 1;
+// .flickity-page-dots {
+// 	position: absolute;
+// 	width: 100%;
+// 	//bottom: -25px;
+// 	bottom: $space-xx-small;
+// 	padding: 0;
+// 	margin: 0;
+// 	list-style: none;
+// 	text-align: center;
+// 	line-height: 1;
 	
-	.dot {
-		cursor: pointer;
-		display: inline-block;
-		width: $space-x-small;
-		height: $space-x-small;
-		margin: 0 2px;
-		background-color: $color-base-dark;
-		border-radius: 100%;
+// 	.dot {
+// 		cursor: pointer;
+// 		display: inline-block;
+// 		width: $space-x-small;
+// 		height: $space-x-small;
+// 		margin: 0 2px;
+// 		background-color: $color-base-dark;
+// 		border-radius: 100%;
 		
-		&.is-selected {
-			background-color: $color-brand;
-		}
-	}
+// 		&.is-selected {
+// 			background-color: $color-brand;
+// 		}
+// 	}
 	
-	@include for-phone-only {
-		.dot {
-			width: $space-x-small;
-			height: $space-x-small;
-		}
-	}
-}
+// 	@include for-phone-only {
+// 		.dot {
+// 			width: $space-x-small;
+// 			height: $space-x-small;
+// 		}
+// 	}
+// }
 
-.flickity-rtl .flickity-page-dots {
-	direction: rtl;
-}
+// .flickity-rtl .flickity-page-dots {
+// 	direction: rtl;
+// }
 
-// flickity-fade
-.flickity-enabled.is-fade .flickity-slider > * {
-	pointer-events: none;
-	z-index: 0;
-}
+// // flickity-fade
+// .flickity-enabled.is-fade .flickity-slider > * {
+// 	pointer-events: none;
+// 	z-index: 0;
+// }
 
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-	pointer-events: auto;
-	z-index: 1;
-}
+// .flickity-enabled.is-fade .flickity-slider > .is-selected {
+// 	pointer-events: auto;
+// 	z-index: 1;
+// }
 
-// flickity-fade
-.flickity-enabled.is-fade .flickity-slider > * {
-    pointer-events: none;
-    z-index: 0;
-}
+// // flickity-fade
+// .flickity-enabled.is-fade .flickity-slider > * {
+//     pointer-events: none;
+//     z-index: 0;
+// }
 
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-    pointer-events: auto;
-    z-index: 1;
-}
+// .flickity-enabled.is-fade .flickity-slider > .is-selected {
+//     pointer-events: auto;
+//     z-index: 1;
+// }

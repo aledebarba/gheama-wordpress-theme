@@ -1,0 +1,140 @@
+// style the control panel interface.
+// div.acf-field[data-name="button_options"].acf-field-group > div.acf-label > label {
+//     font-size: 1rem;
+// }
+ 
+.acf-flexible-content .layout .acf-fc-layout-handle {
+    border: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 16px 10px;
+}
+
+// the roof components
+div.acf-field[data-name="button_options"]:before {
+    content: 'BUTTON';
+    width: 6rem;
+    height: 20px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+
+    background-color:#4196D6;
+    border-radius: 4px;
+
+    color: white;
+    font-size: 0.5rem;
+    font-weight: bold;
+    
+    display: grid;
+    place-items: center;
+}
+
+div.acf-field[data-name="slide_options"] {
+    &:before {
+        content: '< 🖥️ >';
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+}
+div.acf-field[data-name="button_options"].acf-field-group {
+    padding-top: 24px;
+    margin-bottom: 24px;
+}
+
+div.acf-field[data-name="button_set"] { 
+
+    --min-width: 300px;
+
+    div.acf-fields {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: var(--min-width);
+
+        div.acf-field[data-name="link"] {
+            width: 100%;
+
+            div.link-wrap {
+                display: flex;
+                span { 
+                    flex-shrink: 0;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    min-width: 20%;
+                }
+                a { flex-shrink: 1;}
+            }
+
+        }
+        
+        div.acf-field[data-name="button_size"] {
+            width: 50% !important;
+        }
+        div.acf-field[data-name="button_layout"] {
+            width: 50% !important;
+        }
+        div.acf-field[data-name="button_icon"] {
+            width: 100% !important;
+        }
+    }
+
+    table {
+        display: flex;
+        tbody {
+            display: flex;
+            flex-wrap: wrap;
+            tr {
+                width: 50%;
+                min-width: 300px;
+                display: block;
+                margin-top: 0;
+                border-top: 0;
+                @media(min-width: 2000px) {
+                    width: 30%;
+                }
+                td {
+                    border: 0;
+                }
+                td.acf-fields {
+                    box-shadow: inset 0 2px 0px 0px #ddd, inset 0 -2px 0px 0px #ddd;
+                }
+            }
+        }
+    }
+}
+
+div.acf-field[data-name="stacked"] { // buttons groups // header options
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.acf-flexible-content .layout {
+    border-left: 5px dashed lightgray !important;
+    box-shadow: 10px 10px 35px 5px #aaa;
+    border-radius: 4px;
+    padding-left: 15px;
+    margin-bottom: 32px!important;
+
+    .acf-fc-layout-handle {
+        font-size: 18px !important;
+   }
+}
+
+.acf-actions {
+    text-align: left;
+    z-index: 10;
+    text-transform: uppercase;
+
+    a[data-name="add-layout"] {
+        margin-top: 20px;
+        padding: 12px 40px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        &:before {
+            content: '+ ';
+        }
+    }
+}

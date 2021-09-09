@@ -1,0 +1,32 @@
+{
+  "name": "sabia-wordpress-theme",
+  "version": "1.0.0",
+  "description": "sabia wordpress theme",
+  "main": "./assets/sabia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getuserto/2021-sabia-theme.git"
+  },
+  "keywords": [
+    "sabia",
+    "theme",
+    "wordpress-theme",
+    "wordpress"
+  ],
+  "author": "getuser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getuserto/2021-sabia-theme/issues"
+  },
+  "homepage": "https://github.com/getuserto/2021-sabia-theme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.39.0"
+  }
+}

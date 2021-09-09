@@ -1,5 +1,4 @@
 <?php
-
 // Remove User Panel Options
 remove_action('admin_color_scheme_picker', 'admin_color_scheme_picker'); // Color Scheme
 
@@ -14,6 +13,7 @@ add_action('personal_options', function($profileuser) { ?>
 		{
 			display: none;
 		}
+
 	</style>
 <?php });
 
@@ -46,7 +46,7 @@ function theme_change_admin_menu($menu_order) {
 // Admin Menus
 add_action('admin_menu', 'theme_remove_admin_menus');
 function theme_remove_admin_menus() {
-	remove_menu_page('themes.php');
+	//remove_menu_page('themes.php');
 	//remove_submenu_page('themes.php','customize.php?return=' . urlencode(wp_unslash ($_SERVER['REQUEST_URI'])));
     //remove_menu_page('tools.php');
 	//remove_submenu_page('options-general.php', 'options-writing.php');
@@ -200,7 +200,4 @@ function theme_login_logo_title() {
     //return 'Your Site Name and Info';
 	return get_bloginfo('name');
 }
-
-//** -- Login Page -- **//
-
 ?>
