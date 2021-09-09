@@ -1,18 +1,19 @@
 {
-  "name": "sabia-wordpress-theme",
+  "name": "gheama-wordpress-theme",
   "version": "1.0.0",
-  "description": "sabia wordpress theme",
-  "main": "./assets/sabia.js",
+  "description": "Gheama Wordpress Theme",
+  "main": "./assets/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp serve"
+    "dev": "gulp serve",
+    "develop": "gulp serve"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getuserto/2021-sabia-theme.git"
+    "url": "git+https://github.com/aledebarba/gheama-wordpress-theme"
   },
   "keywords": [
-    "sabia",
+    "gheama",
     "theme",
     "wordpress-theme",
     "wordpress"
@@ -20,9 +21,9 @@
   "author": "getuser",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/getuserto/2021-sabia-theme/issues"
+    "url": "https://github.com/aledebarba/gheama-wordpress-theme/issues"
   },
-  "homepage": "https://github.com/getuserto/2021-sabia-theme#readme",
+  "homepage": "https://github.com/aledebarba/gheama-wordpress-theme#readme",
   "devDependencies": {
     "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
