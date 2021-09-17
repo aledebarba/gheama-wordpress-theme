@@ -11,7 +11,7 @@
           <div class="card">
             <img src="https://alemacedo.com/files/gheama/slideshow-1-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+              <h5 class="card-title">Titulo da seção.</h5>
             </div>
           </div>
         </div>

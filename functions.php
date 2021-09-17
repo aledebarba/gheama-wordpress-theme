@@ -6,6 +6,8 @@ include('functions/menu.php');
 include('functions/acf.php');
 include('functions/custom_panel.php');
 include('functions/render-components.php');
+include('functions/render-navs.php');
+include('functions/utils.php');
 
 //** -- SVG -- ** //
 define( 'ALLOW_UNFILTERED_UPLOADS', true );

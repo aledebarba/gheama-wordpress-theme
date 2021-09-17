@@ -23,4 +23,10 @@
 </head>
 
 <body>
-    <main class="content" id="content">
+    <main class="content"'>
+    <?php 
+        $option = get_field('header_appearance', 'option');
+        $brand =  $option['header_menu_image']['sizes']['medium'];
+        $menu = $option['header_menu'];
+        echo nav_slide_down($menu, true, ['Reservations', 'https://google.com', '_blank', 'secondary'],$brand);
+    ?>

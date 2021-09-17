@@ -4,6 +4,7 @@
     $extra_styles_01 = get_field('extra_styles');
     $field_01 = get_field_object('style');
 
+
     if(have_rows('content_widgets')) {
         while (have_rows('content_widgets')) {
             the_row();
