@@ -9,6 +9,7 @@ body {
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 // hero header
@@ -16,8 +17,18 @@ section.hero_header {
     position: relative;
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 
-    .background, .overlay, .centered-logo {
+    #hero-header-overlay {
+        background-color: white;
+        height: 50vh;
+        width: 100vw;
+        position: absolute;
+        top: 100vh;
+        left: 0;
+    }
+
+    .background, .overlay, .centered-logo{
         position: absolute;
         top: 0; left: 0; bottom: 0; right: 0;
         
@@ -32,8 +43,16 @@ section.hero_header {
         height: 100%;
         object-fit: cover;
     }
+
     .centered-logo img {
         width: 10vw;
+    }
+
+    .top-center-logo {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
     }
 
     .overlay {

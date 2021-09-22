@@ -1,7 +1,9 @@
 <?php
-
+    $uId = 'section-ref'.rand(15000, 16000);
+    $uId2 = 'section-ref'.rand(17000, 18000);
 ?>
 
+<section id='<?php echo $uId?>'>
 <div class="container-fluid my-5 collection-2col-strips">
   <div class="row">
     <div class="col-sm-12 col-md-8 p-5 left-content-with-cards">
@@ -54,11 +56,12 @@
     </div>
   </div>
 </div>
+</section>
 
-
+<section id='<?php echo $uId2?>'>
 <div class="container-fluid p-sm-1 p-md-2 p-lg-5">
     <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6" id='<?php echo "$uId2-pinned"?>'>
             <div class="card text-center">
                 <img src="https://alemacedo.com/files/gheama/slideshow-1-7.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -76,9 +79,10 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Vestibulum t
               <div class="card-footer" style='background-color: transparent; border: 0;'>
                             <a href="" class='btn btn-primary'>Discover</a>
                         </div>
-            </div>
+                    </div>
+                <div class='spacer' style='height: 128px;'></div>            
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6" id='<?php echo "$uId2-scrolling"?>'>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col text-center">
                     <div class="card h-100">
@@ -152,11 +156,81 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Vestibulum t
                         </div><!-- card-footer -->
                     </div><!-- card  -->
                 </div><!-- col -->
+               <div class="col text-center">
+                    <div class="card h-100">
+                        <img src="https://alemacedo.com/files/gheama/slideshow-1-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ispsun dolor</h5>
+                            <p class="card-text">Nulla consequat massa quis enim. Donec vitae orci sed dolor rutrum auctor. Vivamus euismod mauris. Duis leo. Ut leo</p>
+                        </div><!-- card-body-->
+                        <div class="card-footer" style='background-color: transparent; border: 0;'>
+                            <a href="" class='btn btn-primary'>Discover</a>
+                        </div><!-- card-footer -->
+                    </div><!-- card  -->
+                </div><!-- col -->
+               <div class="col text-center">
+                    <div class="card h-100">
+                        <img src="https://alemacedo.com/files/gheama/slideshow-1-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ispsun dolor</h5>
+                            <p class="card-text">Nulla consequat massa quis enim. Donec vitae orci sed dolor rutrum auctor. Vivamus euismod mauris. Duis leo. Ut leo</p>
+                        </div><!-- card-body-->
+                        <div class="card-footer" style='background-color: transparent; border: 0;'>
+                            <a href="" class='btn btn-primary'>Discover</a>
+                        </div><!-- card-footer -->
+                    </div><!-- card  -->
+                </div><!-- col -->
+               <div class="col text-center">
+                    <div class="card h-100">
+                        <img src="https://alemacedo.com/files/gheama/slideshow-1-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ispsun dolor</h5>
+                            <p class="card-text">Nulla consequat massa quis enim. Donec vitae orci sed dolor rutrum auctor. Vivamus euismod mauris. Duis leo. Ut leo</p>
+                        </div><!-- card-body-->
+                        <div class="card-footer" style='background-color: transparent; border: 0;'>
+                            <a href="" class='btn btn-primary'>Discover</a>
+                        </div><!-- card-footer -->
+                    </div><!-- card  -->
+                </div><!-- col -->
+               <div class="col text-center">
+                    <div class="card h-100">
+                        <img src="https://alemacedo.com/files/gheama/slideshow-1-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ispsun dolor</h5>
+                            <p class="card-text">Nulla consequat massa quis enim. Donec vitae orci sed dolor rutrum auctor. Vivamus euismod mauris. Duis leo. Ut leo</p>
+                        </div><!-- card-body-->
+                        <div class="card-footer" style='background-color: transparent; border: 0;'>
+                            <a href="" class='btn btn-primary'>Discover</a>
+                        </div><!-- card-footer -->
+                    </div><!-- card  -->
+                </div><!-- col -->
             </div><!-- row -->
         </div><!-- main col -->
     </div><!--main row -->
 </div><!-- container fluid -->
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let container   = document.getElementById('<?php echo "$uId2"?>');
+        let pinned      = document.getElementById('<?php echo "$uId2-pinned"?>');
+        let scrollCol   = document.getElementById('<?php echo "$uId2-scrolling"?>');
+        let main        = document.querySelector('main.content')
 
+        container.style.marginBottom = (container.offsetHeight - pinned.offsetHeight)+"px";
+        main.style.overflowY = "hidden";
+
+        gsap.to( pinned, {
+            scrollTrigger: {
+                trigger: pinned,
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: true,
+                pin: true
+            }
+        })
+    })
+</script>
+<section id='newsletter'>
 <div class="container-fluid py-5 newsletter">
     <div class="row h-100 justify-content-center align-content-center">
         <div class="col-6 text-center">
@@ -170,6 +244,7 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Vestibulum t
         </div>
     </div>
 </div>
+</section>
 
 <footer id='footer pt-5'>
     <div class="container">
@@ -192,9 +267,11 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Vestibulum t
                     <a href="#" class="footer-menu-item">Cookies Policy</a>
                     <a href="#" class="footer-menu-item">Carrer</a>
                 </div>
-        </div>
-        <div class="row justify-content-center">
-            <img src='https://alemacedo.com/files/gheama/Logo-Green.png' class='ending-logo'/>
+            </div>
+            <div class="row justify-content-center">
+                <img src='https://alemacedo.com/files/gheama/Logo-Green.png' class='ending-logo'/>
+            </div>
         </div>
     </div>
 </footer>
+

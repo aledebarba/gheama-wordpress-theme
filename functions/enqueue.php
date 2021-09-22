@@ -55,7 +55,16 @@ function theme_enqueue_css() {
     wp_enqueue_style('main-css', get_stylesheet_directory_uri().'/assets/style/style.css', false, $theme_version.$random_number);
 }
 
-// Scripts ACTUALLY Rellax and Flickity
+/*
+*
+* Loads: 
+* scripts-header.js -> custom scripts loaded at page header
+* scriots-footer.js -> custom scripts loaded at page footer
+* tgs-player.js -> lottie files player
+* model-viewe.min.js -> google 3d model viewer
+* gsap.js -> green sock animation lib
+*
+*/
 add_action('wp_enqueue_scripts', 'theme_enqueue_js', 90);
 
 function theme_enqueue_js() {
@@ -83,6 +92,12 @@ function theme_enqueue_js() {
     //3d
     wp_register_script( 'model_viewer', "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js", null, null, true );
     wp_enqueue_script( 'model_viewer');
+
+    //gsap
+    wp_register_script ('gsap', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js", null, null, false);
+    wp_enqueue_script( 'gsap');
+    wp_register_script( 'gsap-plugin-scroll-trigger', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js", null, null, false);
+    wp_enqueue_script( 'gsap-plugin-scroll-trigger');
 }
 
 add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);

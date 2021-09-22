@@ -1,7 +1,7 @@
 <?php
 include('functions/remove.php');
 include('functions/enqueue.php');
-include('functions/post.php');
+//include('functions/post.php');
 include('functions/menu.php');
 include('functions/acf.php');
 include('functions/custom_panel.php');

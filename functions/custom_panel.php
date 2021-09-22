@@ -114,7 +114,7 @@ function theme_admin_css() { ?>
 		#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
 		#adminmenu a.wp-has-current-submenu:focus+.wp-submenu,
 		.no-js li.wp-has-current-submenu:hover .wp-submenu {
-			background: #403e41;
+			background: #303525;
 		}
 		
 		#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
@@ -124,7 +124,7 @@ function theme_admin_css() { ?>
 		#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
 		.folded #adminmenu li.current.menu-top,
 		.folded #adminmenu li.wp-has-current-submenu {
-            background: #e94367;;
+            background:#5E6849;
 		}
         
         /** Advanced Custom Fields */
@@ -159,13 +159,14 @@ function theme_login_css() { ?>
 		body.login div#login h1 a {
 			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-login.png);
 			width: 320px;
-			height: 131px;
+			height:200px;
 			padding-bottom: 0;
 			-moz-background-size: auto 80%;
 			-webkit-background-size: auto 80%;
 			background-size: auto 80%;
 			background-repeat: no-repeat;
 			background-position: center center;
+			
 		}
 		*/
 		
@@ -179,13 +180,14 @@ function theme_login_css() { ?>
 		
 		/* submit button */
 		body.login form input#wp-submit {
-			background: #e94367;;
+			background: #5E6849;;
     		border-color: transparent;
+			border-radius: 16px;
 		}
 		
 		/* link */
 		body.login #nav a {
-			color: #e94367;;
+			color: #5E6849;;
 		}
 	</style>
 <?php }

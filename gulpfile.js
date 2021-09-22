@@ -28,7 +28,8 @@ task('serve', function() {
     )    
     
     gulp.watch('**/*.php').on('change', browserSync.reload );
-    
+    gulp.watch('**/*.js').on('change', browserSync.reload );
+    gulp.watch('**/*.jsx').on('change', browserSync.reload );
     gulp.watch('**/*.scss').on('change', (_path, _stats)=>{
         frontEndStyles();
         panelStyles();

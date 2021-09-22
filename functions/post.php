@@ -270,43 +270,43 @@ function get_tax_url($args) {
 
 //** -- Post Types -- **//
 
-// Services
-add_action('init', 'create_services_post', 0);
-function create_services_post() {
-	register_post_type(
-		'services', array(
-			'labels' => array(
-				'name' => __('Services'),
-				'singular_name' => __('Services')
-			),
+// // Services
+// add_action('init', 'create_services_post', 0);
+// function create_services_post() {
+// 	register_post_type(
+// 		'services', array(
+// 			'labels' => array(
+// 				'name' => __('Services'),
+// 				'singular_name' => __('Services')
+// 			),
 			
-			'menu_position' => 4,
-			'menu_icon' => 'dashicons-hammer',
-			'capability_type' => 'page',
-			'hierarchical' => true,
+// 			'menu_position' => 4,
+// 			'menu_icon' => 'dashicons-hammer',
+// 			'capability_type' => 'page',
+// 			'hierarchical' => true,
 			
-			'public' => true,
-			'public_queryable' => true,
-			//'exclude_from_search' => true,
-			'has_archive' => false,
-			'can_export' => true,
+// 			'public' => true,
+// 			'public_queryable' => true,
+// 			//'exclude_from_search' => true,
+// 			'has_archive' => false,
+// 			'can_export' => true,
 			
-			'query_var' => true,
-			'show_ui' => true,
-			'show_in_nav_menus' => true,
-			'show_in_admin_bar' => true,
+// 			'query_var' => true,
+// 			'show_ui' => true,
+// 			'show_in_nav_menus' => true,
+// 			'show_in_admin_bar' => true,
 			
-			'rewrite' => array(
-				'slug' => 'services',
-				'with_front' => true
-			),
+// 			'rewrite' => array(
+// 				'slug' => 'services',
+// 				'with_front' => true
+// 			),
 			
-			'supports' => array (
-				'title', 'thumbnail', 'page-attributes', 'revisions', 'excerpt'
-			),
-		)
-	);
-}
+// 			'supports' => array (
+// 				'title', 'thumbnail', 'page-attributes', 'revisions', 'excerpt'
+// 			),
+// 		)
+// 	);
+// }
 /*
 // Portfolio
 add_action('init', 'create_portfolio_post', 0);

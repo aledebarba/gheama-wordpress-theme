@@ -3,7 +3,7 @@
       
       function nav_slide_down($menu, $showextrabutton = true, $button = ['Read More', 'https://weather.com','_blank'], $imageurl='https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=60'){
 
-          $btn = $showextrabutton ? "<a class='btn btn-primary mx-1' role='button' href='{$button[1]}' style='margin: 0!important; transform: translate(-8px, -4px)'>{$button[0]}</a>" : "";
+          $btn = $showextrabutton ? "<a class='btn btn-extra mx-1' role='button' href='{$button[1]}' style='margin: 0!important; transform: translate(-8px, -4px)'>{$button[0]}</a>" : "";
           $menu_items = wp_get_nav_menu_items( $menu );
           $output = "
           <div class='fixed-elements'>
