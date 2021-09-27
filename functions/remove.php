@@ -18,8 +18,8 @@ remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 
-add_filter('user_can_richedit', '__return_false', 50);
-remove_action('welcome_panel', 'wp_welcome_panel');
+// add_filter('user_can_richedit', '__return_false', 50);
+// remove_action('welcome_panel', 'wp_welcome_panel');
 
 // Remove Feed
 /*

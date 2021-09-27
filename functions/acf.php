@@ -17,7 +17,7 @@ if (function_exists('acf_add_options_page')) {
 
 add_action('admin_enqueue_scripts', 'acf_custom_styles');
 function acf_custom_styles () {
-	wp_enqueue_style( 'acf_custom_scripts', get_stylesheet_directory_uri().'/assets/style/acf_custom.min.css', null, null, "screen" );
+	// wp_enqueue_style( 'acf_custom_scripts', get_stylesheet_directory_uri().'/assets/style/acf_custom.min.css', null, null, "screen" );
 }
 
 //add_filter('acf/settings/show_admin', '__return_false'); // Hide ACF from menu

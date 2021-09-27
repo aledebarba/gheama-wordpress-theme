@@ -1,71 +1,109 @@
 // color pallete
+@use "sass:color";
 
-$theme-yellow: hsl(39, 42%, 58%);
-$theme-yellow-light: hsl(39, 42%, 78%);
-$theme-yellow-dark: hsl(39, 42%, 38%);
+$theme-yellow:          hsl(39, 42%, 58%);
+$theme-yellow-light:    hsl(39, 42%, 78%);
+$theme-yellow-bright:   hsl(41, 40%, 91%);
+$theme-yellow-dark:     hsl(39, 42%, 38%);
+$theme-green:           hsl(84, 15%, 35%);
+$theme-green-light:     hsl(84, 15%, 50%);
+$theme-green-dark:      hsl(84, 15%, 15%);
+$theme-gray:            hsl(0, 0%, 41%);
+$theme-gray-dark:       hsl(0, 0%, 21%);
+$theme-gray-light:      hsl(0, 0%, 71%);
+$theme-white:           hsl(0, 0%, 97%);
+$theme-black:           hsl(0, 0%, 15%);
+$theme-beige:           hsl(21, 18%, 75%);
+$theme-background:      #F6F5F0;
 
-$theme-green: hsl(84, 15%, 35%);
-$theme-green-light: hsl(84, 15%, 50%);
-$theme-green-dark: hsl(84, 15%, 15%);
-
-$theme-gray: hsl(0, 0%, 41%);
-$theme-gray-dark: hsl(0, 0%, 21%);
-$theme-gray-light:hsl(0, 0%, 71%);
-
-$theme-white: hsl(0, 0%, 97%);
-$theme-beige: hsl(21, 18%, 75%);
-
-$font-button:   ("family":urbana, "weight": 300);
-$font-p:        ("family":urbana, "weight": 300);
-$font-h:        ("family":'laca-text', "weight": 700);
-$font-menu:     ("family":urbana, "weight": 400);
-
+$theme-primary:     $theme-green;
+$theme-secondary:   $theme-yellow;
+$theme-danger:      coral;
+$theme-alert:       gold;
+$theme-sucess:      $theme-green-light;
+$theme-light:       $theme-white;
+$theme-dark:        $theme-black;
 
 // bootstrap overhides
-a.btn.btn-primary {
-    background-color: $theme-yellow !important;
-    border: 0;
-    padding: 0.8rem 1.4rem;
-    border-radius: 999px;
-    margin: 16px 0px!important;
-    transform: translateX(-4px);
-    font-family: map-get($font-button, "family")!important;
-    font-weight: map-get($font-button, "weight")!important;
-    &:focus {
-        border: 2px solid $theme-yellow-light!important;
-        box-shadow: 0 0 0 0.25rem $theme-yellow-light!important;
-    }
-    &:hover {
-        background-color: $theme-yellow-light!important;
-        box-shadow: 0 0 15px 0px $theme-gray-light!important;
-        color: $theme-gray-dark!important;
+$buttons:   
+    "primary"           $theme-primary      white 0,
+    "secondary"         $theme-secondary    white 0,
+    "light"             $theme-light        black 0,
+    "dark"              $theme-dark         white 0,
+    "outline-primary"   $theme-primary      white 1,
+    "outline-secondary" $theme-secondary    white 1,
+    "outline-light"     $theme-light        white 1,
+    "outline-dark"      $theme-dark         white 1,
+    "danger"            $theme-danger       white 0,
+    "alert"             $theme-alert        white 0,
+    "sucess"            $theme-sucess       white 0,
+    "success"           $theme-sucess       white 0;
+
+@each $class, $bg, $color, $outline in $buttons {
+    a.btn.btn-#{$class} {
+        transform-origin: center;
+        transition: all 400ms ease;
+        border: #{$outline}px solid #{$bg};
+        border-radius: 999px;
+        padding: 0.8rem 1.4rem;
+        margin: 16px 8px!important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        font: var(--font-button);
+        transform: translateX(-4px);
+        @if $outline==0 {
+            background-color: #{$bg};
+            color: #{$color};
+        }
+        @if $outline!=0 {
+            background-color: transparent;
+            color: #{$bg};
+        }
+        &:hover {
+            transform: scale(1.05) translateX(-4px);
+            transition: all 400ms ease;
+            box-shadow: 0 0 5px 0 #0008;
+        }
+        &:focus {
+            border: 0;
+            outline: 0;
+        }
+        &:first-child{
+            margin-left: 0 !important;
+        }
+        &:last-child{
+            margin-right: 0 !important;
+        }
     }
 }
 
+
 .h1 {
-    font-family: map-get($font-h, "family");
-    font-weight: map-get($font-h, "weight");
-    line-height: 1;
-    color: $theme-green;
+    font: var(--font-h1);
+}
+.h2 {
+    font: var(--font-h1);
 }
 
 .p {
-    font-family: map-get($font-p, "family");
-    font-weight: map-get($font-p, "weight");
-    line-height: 1.4;
-    font-size: 1rem;
+    font: var(--font-h2);
     color: black;
 }
 
-// temporary styles
+// cards
 h1.card-title {
-    font-size: 2rem;
+   font: var(--font-h1-card);
 }
 
 h5.card-title {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font: var(--font-h5-card);
+}
 
+h4 {
+    font: var(--font-h4-card);
+    color: $theme-yellow;
 }
 
 .newsletter {
@@ -83,12 +121,6 @@ h5.card-title {
     margin: 32px 0px;
 }
 
-h4 {
-    font-family: "laca-text";
-    color: $theme-yellow;
-    font-size: 1.6rem;
-    font-weight: bold;
-}
 
 .btn-send {
     background-color: $theme-yellow;
@@ -96,35 +128,6 @@ h4 {
     color: white;
     border-radius: 8px;
     align-self: end;
-}
-
-.footer-social-menu {
-    display: flex;
-    justify-content: flex-end;
-    a {
-        padding: 1rem;
-    }
-}
-
-.footer-menu {
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 0.5rem;
-    font-family: map-get($font-button, "family");
-    a {
-        height: 2rem;
-        display: flex;
-        padding: 8px 1rem;
-        justify-content: center;
-        align-items: center;
-        border-left: 1px solid $theme-green-light;
-        text-decoration: none;
-        color: $theme-green-light;
-        &:first-child {
-            border: 0;
-        }       
-
-    }
 }
 
 .collection-2col-strips {

@@ -1,4 +1,5 @@
 <?php
+include('functions/utils.php');
 include('functions/remove.php');
 include('functions/enqueue.php');
 //include('functions/post.php');
@@ -7,7 +8,6 @@ include('functions/acf.php');
 include('functions/custom_panel.php');
 include('functions/render-components.php');
 include('functions/render-navs.php');
-include('functions/utils.php');
 
 //** -- SVG -- ** //
 define( 'ALLOW_UNFILTERED_UPLOADS', true );

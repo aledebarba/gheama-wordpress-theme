@@ -1,15 +1,32 @@
 
 // define top fixed menu elements
+
+.slide-down-top-menu {
+    --slide-down-icon-color: #{$theme-green};
+    --icon-size: 36px;
+    z-index: 4000;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+}
+
 .fixed-elements {
     position: fixed;
-    top: 0;
+    top: 24px;
     left: 0;
-    display: flex;
     width: 100vw;
+    padding-right: 12px;
+
+    @media screen and (min-width: 480px) {
+        padding-right: 32px;
+    }
+
+    display: inline-flex;
     height: auto;
-    z-index: 3;
+    z-index: 4003;
     justify-content: flex-end;
-    padding: 2rem;
+    align-items: center;
 
     button {
         white-space: nowrap;
@@ -20,63 +37,55 @@
         color: $theme-white;
         padding: 8px 32px;
         box-shadow: 0 5px 30px 0px $theme-gray;
-    }
-
-    }
-    #menu-controler {        
-        --slide-down-icon-color: #{$theme-green};
-        --icon-size: 2.5rem;
-        z-index: 1;
-        cursor: pointer;
-        height: 2.5rem;
+        border-radius: 999px;
         display: flex;
-
-    .menu-icon {
-        position: absolute;
-        width: var(--icon-size);
-        height: var(--icon-size);
-        backdrop-filter: drop-shadow(4px 4px 10px blue);
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
     }
+ }
 
-    input {
+ #menu-controler {        
+        z-index: 10;
+        cursor: pointer !important;
+        display: flex;
         position: relative;
         width: var(--icon-size);
         height: var(--icon-size);
-        opacity: 0;
-        z-index: 2;
-        }
 
-    input:checked ~ .menu-icon {
-        background: linear-gradient(
-            transparent 40%,
-            var(--slide-down-icon-color) 40%,
-            var(--slide-down-icon-color) 60%,
-            transparent 60%
-        ),
-        linear-gradient(
-            90deg,
-            transparent 40%,
-            var(--slide-down-icon-color) 40%,
-            var(--slide-down-icon-color) 60%,
-            transparent 60%
-        );
-        transform: rotate(45deg);
+.menu-icon {
+        position: absolute;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        background-image: var(--menu-icon);
+        background-size: cover;
+        background-repeat: no-repeat;
+        --menu-icon: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.28436 38.7502C4.10942 37.8414 14.1029 37.8414 14.1029 37.8414C14.1029 37.8414 45.0034 37.8414 46.5231 37.8414C48.0429 37.8414 48.1977 42.6945 46.5231 42.6945C44.8485 42.6945 18.7447 42.1937 14.1029 42.1937C9.46108 42.1937 4.05431 43.9656 2.28436 43.5735C0.514415 43.1814 0.459307 39.6591 2.28436 38.7502Z' fill='%235B664B'/%3E%3Cpath d='M2.28436 1.27868C4.10942 0.369873 14.1029 0.369873 14.1029 0.369873C14.1029 0.369873 45.0034 0.369873 46.5231 0.369873C48.0429 0.369873 48.1977 5.22296 46.5231 5.22296C44.8485 5.22296 18.7447 4.7221 14.1029 4.7221C9.46108 4.7221 4.05431 6.494 2.28436 6.10194C0.514415 5.70988 0.459307 2.1875 2.28436 1.27868Z' fill='%235B664B'/%3E%3Cpath d='M2.30992 19.7485C4.14581 18.8618 14.1385 18.9824 14.1385 18.9824C14.1385 18.9824 45.0368 19.3552 46.5564 19.3736C48.076 19.3919 48.1723 24.2465 46.4979 24.2263C44.8234 24.2061 18.7275 23.3903 14.086 23.3343C9.44457 23.2783 4.01681 24.9848 2.25172 24.5714C0.486632 24.158 0.474031 20.6352 2.30992 19.7485Z' fill='%235B664B'/%3E%3C/svg%3E%0A");
+        --menu-icon-close: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.0173 29.1998C10.0173 29.1998 2.80359 38.026 2.18986 40.213C1.57613 42.4 4.34325 44.5804 5.92445 43.2653C6.68109 42.636 7.65521 40.9576 8.83257 38.929C10.1156 36.7184 11.6399 34.0919 13.3872 31.9541C14.3989 30.7163 16.8581 27.7795 19.8319 24.2417C22.54 27.3895 25.4656 30.7959 28.0407 33.7943C31.8189 38.1935 34.8427 41.7142 35.3179 42.2508C36.5844 43.6808 40.1004 40.331 38.9511 39.0332L22.7645 20.7559C25.1827 17.8835 27.7264 14.8659 29.9952 12.1746C33.7327 7.74093 36.7239 4.19263 37.1775 3.63765C38.3863 2.15864 34.5168 -0.775777 33.4198 0.566448L19.7244 17.3231L14.4335 11.3487C14.4335 11.3487 6.876 2.81507 4.81545 1.85914C2.7549 0.903213 0.159622 3.28558 1.20463 5.05692C1.70469 5.90455 3.20551 7.1348 5.01946 8.62173C6.99619 10.2421 9.34476 12.1672 11.1753 14.2342C12.1301 15.3124 14.2581 17.7711 16.8758 20.8083L10.0173 29.1998Z' fill='%235B664B'/%3E%3C/svg%3E%0A");
     }
 
-    input ~ .menu-icon {
-        background: linear-gradient(
-            var(--slide-down-icon-color) 20%,
-            transparent 20%,
-            transparent 40%,
-            var(--slide-down-icon-color) 40%,
-            var(--slide-down-icon-color) 60%,
-            transparent 60%,
-            transparent 80%,
-            var(--slide-down-icon-color) 80%
-        ),
-        transparent;
-        transform: rotate(0);
-    }
+input {
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    opacity: 0.1;
+    z-index: 2;
+    cursor: pointer;
+}
+
+input:checked ~ .menu-icon {
+    cursor: pointer;
+    background-image: var(--menu-icon-close);
+    transition: all 300ms ease;
+}
+
+input ~ .menu-icon {
+    cursor: pointer;
+    background-image: var(--menu-icon);
+    background-size: 110%;
+    transition: all 300ms ease;
+}
+
 }
 
 // the slide down panel
@@ -85,7 +94,7 @@
     position: fixed;
     top: calc(var(--height) * -1);
     left: 0;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     padding: 1rem;
     display: flex;
@@ -95,46 +104,52 @@
     background-color: $theme-beige;
     box-shadow: 0px 5px 35px 0px #00000088;
     transition: all 350ms ease-in-out;
-    z-index: 1;
+    z-index: 100;
+
     @media screen and (min-width: 640px) {
-        padding: 6rem 1rem 2rem 1rem;
+        padding: 6rem 1rem 3rem 1rem;
     }
 
     .brand {
         position: absolute;
-        left: 1rem;
-        top: 2rem;
-        min-width: 10vw;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 128px;
+        width: 35vw;
+        max-width: 240px;
+        min-width: 180px;
+
         img {
             width: 100%;
         }
-        @media screen and (min-width: 480px) {
-            left: 50%;
-            transform: translateX(-50%);
-        }
+
         @media screen and (min-width: 640px) {
-            display: block;
-            width: 150px;
-            height: 150px;
+            top: 92px;
         }
     }
 
     .menu-items {
         display: flex;
         flex-direction: column;
+        width: 80vw;
+        margin: 192px auto 4rem auto;
+        align-items: center;
+        justify-content: center;
+
         @media screen and (min-width: 640px) {
             flex-direction: row;
+            margin: 96px auto 1rem auto;
         }
+
         a {
             text-decoration: none;
             color: black;
-            padding: 0.1rem 0.8rem;
+            padding: 1rem 0.8rem;
             text-transform: uppercase;
-            border-top: 1px solid #00000088;
             text-align: center;
             transition: all 150ms ease;
-            font-weight: map-get($font-menu, "weight");
-            font-size: 1.1rem;
+            font: var(--font-menu);
+            white-space: nowrap;
 
         &:first-child {
             border: 0;
@@ -142,20 +157,24 @@
 
         &:hover {
             font-weight: bold;
-            transform: scale(1.1);
-            text-shadow: 0 0 3px #00000022;
-            transition: all 150ms ease;
+            transform: scale(1.3);
+            text-shadow: 0 0 3px #00000044;
+            transition: all 350ms cubic-bezier(0.630, -0.450, 0.550, 1.480);
+        }
+
+        @media screen and (min-width: 480px) {
+            text-transform: capitalize;
         }
 
         @media screen and (min-width: 640px) {
             border-top: 0;
-            border-left: 1px solid #00000088;
+            padding: 0 2rem;
         }
-        }
+      }
     }
 }
 // attends to javascript
 .slide-down-isopened {
     top: 0px !important;
 }
-    
+

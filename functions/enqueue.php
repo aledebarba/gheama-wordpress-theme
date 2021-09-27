@@ -63,6 +63,8 @@ function theme_enqueue_css() {
 * tgs-player.js -> lottie files player
 * model-viewe.min.js -> google 3d model viewer
 * gsap.js -> green sock animation lib
+* flickity javascript
+* flickity css
 *
 */
 add_action('wp_enqueue_scripts', 'theme_enqueue_js', 90);
@@ -76,11 +78,7 @@ function theme_enqueue_js() {
     // Script Header
     wp_register_script('script-header', $scripts_url."script-header.js", null, null, false);
     wp_enqueue_script('script-header');
-    
-    // Script Footer
-    wp_register_script('script-footer', $scripts_url."script-footer.js", null, null, true);
-    wp_enqueue_script('script-footer');
-    
+        
     // Font Awesome
     wp_register_script('font-awesome', 'https://kit.fontawesome.com/f6e2c5467d.js', null, null, true);
     wp_enqueue_script('font-awesome');
@@ -98,6 +96,21 @@ function theme_enqueue_js() {
     wp_enqueue_script( 'gsap');
     wp_register_script( 'gsap-plugin-scroll-trigger', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js", null, null, false);
     wp_enqueue_script( 'gsap-plugin-scroll-trigger');
+    wp_register_script( 'scroll-helper', "https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.min.js", null, null, true);
+    wp_enqueue_script( 'scroll-helper');
+    wp_register_script( 'scroll-helper-plugin', "https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/plugins/overscroll.min.js", null, null, true);
+    wp_enqueue_script( 'scroll-helper-plugin');
+
+
+    //flickity
+    wp_register_style( 'flickity-css', "https://unpkg.com/flickity@2/dist/flickity.min.css" , null, null, "screen" );
+    wp_enqueue_style(  'flickity-css');
+    wp_register_script( 'flickity-js', "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", null, null, true );
+    wp_enqueue_script(  'flickity-js');
+    
+    // Script Footer
+    wp_register_script('script-footer-defer', $scripts_url."script-footer.js", null, null, true);
+    wp_enqueue_script('script-footer-defer');
 }
 
 add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);

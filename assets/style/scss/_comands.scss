@@ -159,3 +159,20 @@
 @mixin mask-size($property) {
 	@include css3-prefix('mask-size', $property);
 }
+
+@mixin fontclamp($min, $var, $max, $scr-min:640px, $scr-max:1440px) {
+	
+	font-size: #{$min};
+	font-size: clamp( #{$min}, #{$var}, #{$max} );
+
+	@media screen and (min-width: $scr-min) {
+		font-size: #{$var};
+		font-size: clamp( #{$min}, #{$var}, #{$max} );
+	}
+	
+	@media screen and (min-width: $scr-max) {
+		font-size: #{$max};
+		font-size: clamp( #{$min}, #{$var}, #{$max} );
+	}
+
+}

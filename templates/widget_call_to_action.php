@@ -4,5 +4,5 @@
     $media   = get_sub_field( "media" );
     $buttons = get_sub_field( "buttons_group" );
     
-    echo render_cta_field($options, $text, $media, $buttons);   
+    echo render_cta_field($options, $text['text_content'], $media, $buttons);   
 ?>

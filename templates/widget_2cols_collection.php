@@ -246,32 +246,3 @@ Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Vestibulum t
 </div>
 </section>
 
-<footer id='footer pt-5'>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-4">
-                <div class="footer-social-menu d-flex">
-                    <a href="" class="footer-social-menu-item"><img src="https://alemacedo.com/files/gheama/Icon%20awesome-facebook-square.png" alt=""></a>
-                    <a href="" class="footer-social-menu-item"><img src="https://alemacedo.com/files/gheama/Icon%20awesome-instagram.png" alt=""></a>
-                    <a href="" class="footer-social-menu-item"><img src="https://alemacedo.com/files/gheama/Icon%20awesome-pinterest-square.png" alt=""></a>
-                    <a href="" class="footer-social-menu-item"><img src="https://alemacedo.com/files/gheama/Icon%20awesome-twitter-square.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-8 footer-menu">
-                <div class="footer-menu justify-content-center d-flex">
-                    <a href="#" class="footer-menu-item">Contact Us</a>
-                    <a href="#" class="footer-menu-item">Locations</a>
-                    <a href="#" class="footer-menu-item">Allergens</a>
-                    <a href="#" class="footer-menu-item">Terms & Conditions</a>
-                    <a href="#" class="footer-menu-item">Privacy Policy</a>
-                    <a href="#" class="footer-menu-item">Cookies Policy</a>
-                    <a href="#" class="footer-menu-item">Carrer</a>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <img src='https://alemacedo.com/files/gheama/Logo-Green.png' class='ending-logo'/>
-            </div>
-        </div>
-    </div>
-</footer>
-

@@ -21,12 +21,15 @@
     <?php wp_head(); ?>
 
 </head>
-
-<body>
-    <main class="content"'>
-    <?php 
+<?php 
         $option = get_field('header_appearance', 'option');
+        $bgColor = get_field('background_color', 'option');
         $brand =  $option['header_menu_image']['sizes']['medium'];
         $menu = $option['header_menu'];
-        echo nav_slide_down($menu, true, ['Reservations', 'https://google.com', '_blank', 'secondary'],$brand);
-    ?>
+?>
+<body style="--custom-background-color: <?php echo $bgColor; ?>">
+<?php
+   echo nav_slide_down($menu, true, ['Reservations', 'https://google.com', '_blank', 'secondary'],$brand);;
+?>
+    <main class="content"'>
+    

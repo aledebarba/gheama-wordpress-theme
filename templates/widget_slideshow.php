@@ -1,44 +1,30 @@
+<section class='widget-slideshow'>
 <?php
-     
-      $compOptions = get_field( "slideshow_options" );
+
+      $options = get_sub_field('slideshow_options');
+      $showPageDots = $options['slideshow_show_page_dots'] ? 'true' : 'false';
+
+if (have_rows('slides')) {
       $slides_config = '
             {
               "cellAlign": "center", 
-              "contain": true,
+              "contain": "true",
               "wrapAround": "true",
-              "autoPlay": 3000,
-              "pageDots": false
+              "autoPlay": '.$options['slideshow_autoplay_time'].',
+              "pageDots": '.$showPageDots.'
              }';
 
-      echo "<div class='main-carousel' data-flickity=' $slides_config '>";
-      if ( have_rows('slides') ) {
-             while( have_rows('slides') ) {
-                  the_row();
-                  $slideOptions = get_sub_field('slide_options');
-                  $bg           = $slideOptions['buttons_group']; 
-                  $richmedia    = $slideOptions['media']['content_type'] == "image" ? render_image($slideOptions['media']['image']) : render_video($slideOptions['media']['video'], $slideOptions['media']['poster']); 
-                  $layout       = $slideOptions['content_position'];
-                  $textcolor    = $slideOptions['text_color'];
-                  $media        = get_sub_field('media');
-                  $textcontent  = render_text_content($slideOptions['title'], $slideOptions['subtitle'], $slideOptions['text'], $slideOptions['column'], $bg);
+      echo "<div class='widget-slideshow' data-flickity=' $slides_config '>";
+      while( have_rows('slides') ) {
+            the_row();
+            $options    = get_sub_field('options');
+            $text       = get_sub_field('text_content');
+            $media      = get_sub_field('media');
+            $buttons    = get_sub_field('buttons_group');
 
-                  echo "<div class='carousel-cell'>".render_CallToAction( $textcontent, $richmedia, $layout, 'auto', $textcolor )."</div>";
-             }
-      }      
-      echo "</div>
-      <style>
-            .carousel-cell {
-                  width: 100%;
-            }
-            .carousel-cell img {
-                  object-fit: cover;
-                  height: 100%;
-                  width: 100%;
-            }
-            .flickity-prev-next-button svg {
-                  filter: brightness(10);
-                  transform: scale(1.3);
-            }
-      </style>
-      ";
+            echo render_cta_field($options, $text['text_content'], $media, $buttons);
+      }
+      echo "</div>";
+}
 ?>
+</section>
