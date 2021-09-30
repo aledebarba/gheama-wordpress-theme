@@ -907,6 +907,9 @@ section.call-to-action[type=color] {
 section.call-to-action[type=gradient] {
   background: linear-gradient(var(--bgfrom), var(--bgto));
 }
+section.call-to-action .content-position-background {
+  padding: 0 !important;
+}
 section.call-to-action .content-position-background .background-content img {
   position: absolute;
   top: 0;
@@ -935,6 +938,9 @@ section.call-to-action .info {
 }
 section.call-to-action .info[center="1"] {
   text-align: center !important;
+}
+section.call-to-action .info[center="1"] .buttons-group {
+  justify-content: center;
 }
 
 body h1, .text_content h1, .txt h1, .text h1 {
@@ -1070,7 +1076,7 @@ body .p.quoted:after, .text_content .p.quoted:after, .txt .p.quoted:after, .text
 footer {
   --footer-background-color: #83936c;
   --footer-elements-color: #f7f7f7;
-  padding: 64px 0 64px 0;
+  padding: 0 0 32px 0;
   background-color: var(--footer-background-color);
   position: relative;
   box-shadow: 0px -10px 64px 5px #0008;
@@ -1083,21 +1089,52 @@ footer nav.nav__menu___footer {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: center;
 }
 footer nav.nav__menu___footer a, footer nav.nav__menu___footer a:hover {
   color: var(--footer-elements-color);
   border-color: var(--footer-elements-color);
+  border: 0;
+}
+footer nav.nav__menu___footer a:first-child, footer nav.nav__menu___footer a:hover:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+footer nav.nav__menu___footer a:last-child, footer nav.nav__menu___footer a:hover:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+footer nav.nav__menu___footer a:hover, footer nav.nav__menu___footer a:hover:hover {
+  transition: all 200ms ease;
+  opacity: 1;
+  transform: scale(1.1) translateY(-3px);
 }
 footer .footer-image {
   width: 10vw;
-  margin-top: 64px;
+  margin: 5rem auto;
 }
 footer .footer-social-menu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  transform: translateX(-12px);
+  margin: 1rem auto;
 }
 footer .footer-social-menu a {
-  padding: 1rem;
+  padding: 0rem 2vw;
+  opacity: 0.7;
+  transition: all 300ms ease;
+  font-size: clamp(12px, 0.8vw, 24px);
+}
+footer .footer-social-menu a:hover {
+  transition: all 200ms ease;
+  opacity: 1;
+  transform: scale(1.5) translateY(-8px);
+}
+footer .footer-social-menu a:first-child {
+  padding-left: 0;
+}
+footer .footer-social-menu a:last-child {
+  padding-right: 0;
 }
 footer .footer-menu {
   display: flex;

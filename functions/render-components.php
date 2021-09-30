@@ -122,18 +122,25 @@
         ";
       }
 
-      function render_image($imgArr) {
+       /*
+      * Auxiliary function, render an image as a complete <picture> HTML Tag
+      * gathering all the sourceset subtags from image wordpress array
+      * arguments: 
+      */
+      function render_image($imgArr, $w="100%", $h="100%", $fit="cover") {
           if ($imgArr) {
               $thumbnail    = $imgArr['sizes']['thumbnail'];
               $medium       = $imgArr['sizes']['medium'];
               $medium_large = $imgArr['sizes']['medium_large'];
               $large        = $imgArr['sizes']['large'];
               $title        = $imgArr['alt'] ? $imgArr['alt'] : 'visual content';
+              $style        = "object-fit: $fit; width: $w; height: $h";
+
               return "<picture>
                 <source srcset='$medium' media='(min-width: 768px)'>
                 <source srcset='$medium_large' media='(min-width: 1000px)'>
                 <source srcset='$large' media='(min-width: 1920px)'>
-                <img src='$thumbnail' alt='$title' style='object-fit: cover; width: 100%; height: 100%'>
+                <img src='$thumbnail' alt='$title' style='$style'>
               </picture>";
           }
       }
@@ -250,8 +257,8 @@
         if ($options['content_position'] == "background") {
          $output = "
           <section class='call-to-action' style='$style'>
-            <div class='container-".$options['width']." content-position-background' style=''>
-              <div class='row m-0 p-0 g-0'>
+            <div class='container-".$options['width']." content-position-background h-100' style=''>
+              <div class='row m-0 p-0 g-0 h-100'>
                 <div class='background-content' >".render_media($media)."</div>
                 <div class='overlay' style='--overshow: $overshow; --overopac: $overopac; --overcolor: $overcolor'></div>
                 <div class='info col-sm-11 col-md-9 col-lg-8 col-xl-6' center='$center' >".render_text_field($text, $buttons)."</div>
