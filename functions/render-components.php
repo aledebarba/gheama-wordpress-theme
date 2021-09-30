@@ -128,6 +128,7 @@
       * arguments: 
       */
       function render_image($imgArr, $w="100%", $h="100%", $fit="cover") {
+        console($imgArr);
           if ($imgArr) {
               $thumbnail    = $imgArr['sizes']['thumbnail'];
               $medium       = $imgArr['sizes']['medium'];

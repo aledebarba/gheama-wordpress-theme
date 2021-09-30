@@ -3,8 +3,10 @@
       $parallax = get_sub_field('header_parallax');      
       $top_logo = get_sub_field('top_logo');
       $logo = get_sub_field('logo');
-      $background = get_sub_field('background_type') == "image" ? render_image( get_sub_field('image') ) : "<span></span>";
-      $background = get_sub_field('background_type') == "video" ? render_video( get_sub_field('video'), get_sub_field('video_poster') ) : "<span></span>";
+      $background = get_sub_field('background_type') == "image" ? render_image( get_sub_field('image')) 
+                  : (get_sub_field('background_type') == "video" ? render_video( get_sub_field('video'), get_sub_field('video_poster') ) : "<span></span>");
+      
+      console($background);
 
       $output = "
       <section class='hero_header' id='hero-header'>
