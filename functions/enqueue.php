@@ -80,7 +80,7 @@ function theme_enqueue_js() {
     wp_enqueue_script('script-header');
         
     // Font Awesome
-    wp_register_script('font-awesome', 'https://kit.fontawesome.com/f6e2c5467d.js', null, null, true);
+    wp_register_script('font-awesome', 'https://kit.fontawesome.com/52680288f1.js', null, null, false);
     wp_enqueue_script('font-awesome');
 
     //lottie
